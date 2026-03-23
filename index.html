@@ -3,12 +3,95 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>全球电池产业政策图谱 2026</title>
+<title>CATL 全球电池产业情报中心 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"/>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
-<script src="https://cdn.jsdelivr.net/npm/@unocss/runtime"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;overflow:hidden}
+
+.app-nav{
+  position:fixed;top:0;left:0;right:0;z-index:9999;
+  background:#060e1c;
+  border-bottom:1px solid rgba(255,255,255,.1);
+  height:46px;display:flex;align-items:center;
+  padding:0 40px;
+}
+.app-nav-logo{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:13px;font-weight:700;
+  color:rgba(255,255,255,.45);
+  letter-spacing:.04em;
+  margin-right:32px;
+  display:flex;align-items:center;gap:8px;
+}
+.app-nav-logo-icon{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:22px;height:22px;border-radius:5px;
+  background:linear-gradient(135deg,#1677ff,#0ea5e9);
+  font-size:12px;
+}
+.app-nav-tabs{display:flex;gap:2px}
+.app-nav-tab{
+  padding:0 22px;height:46px;line-height:46px;
+  background:transparent;border:none;
+  font-family:'Space Grotesk',sans-serif;
+  font-size:13px;font-weight:600;
+  color:rgba(255,255,255,.42);
+  cursor:pointer;transition:all .18s;
+  position:relative;letter-spacing:.03em;
+  white-space:nowrap;
+}
+.app-nav-tab:hover{color:rgba(255,255,255,.75)}
+.app-nav-tab.active{color:#60a5fa}
+.app-nav-tab.active::after{
+  content:'';position:absolute;bottom:0;left:10px;right:10px;
+  height:2px;background:#60a5fa;border-radius:2px 2px 0 0;
+}
+.app-nav-meta{
+  margin-left:auto;
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;color:rgba(255,255,255,.28);
+  letter-spacing:.04em;
+}
+
+.page-frame{
+  position:fixed;
+  top:46px;left:0;right:0;bottom:0;
+  width:100%;height:calc(100vh - 46px);
+  border:none;
+  display:none;
+  background:#f0f4f8;
+}
+.page-frame.active{display:block}
+</style>
+</head>
+<body>
+
+<nav class="app-nav">
+  <div class="app-nav-logo">
+    <span class="app-nav-logo-icon">🔋</span>
+    CATL Intelligence Hub
+  </div>
+  <div class="app-nav-tabs">
+    <button class="app-nav-tab active" onclick="switchPage('policy')">政策图谱</button>
+    <button class="app-nav-tab" onclick="switchPage('cert')">认证速查</button>
+  </div>
+  <div class="app-nav-meta">数据截至 2026年3月 · 宁德时代海外乘用车事业部</div>
+</nav>
+
+<iframe id="frame-policy" class="page-frame active"
+  srcdoc="<!DOCTYPE html>
+<html lang=&quot;zh-CN&quot;>
+<head>
+<meta charset=&quot;UTF-8&quot;/>
+<meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;/>
+<title>全球电池产业政策图谱 2026</title>
+<link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;/>
+<link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap&quot;/>
+<link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css&quot;/>
+<script src=&quot;https://cdn.jsdelivr.net/npm/@unocss/runtime&quot;></script>
+<script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js&quot;></script>
 <style>
 :root{
   --bg:#f0f4f8;--surface:#fff;--surface2:#f7fafc;--border:#e2e8f0;
@@ -291,267 +374,267 @@ footer em{color:#3b82f6;font-style:normal}
 <body>
 
 <!-- ══ HEADER ══ -->
-<div class="hd">
-  <div class="hd-circles"><span></span><span></span><span></span></div>
-  <div class="hd-inner">
-    <div class="hd-eyebrow">Global Battery Policy Intelligence · 2026</div>
+<div class=&quot;hd&quot;>
+  <div class=&quot;hd-circles&quot;><span></span><span></span><span></span></div>
+  <div class=&quot;hd-inner&quot;>
+    <div class=&quot;hd-eyebrow&quot;>Global Battery Policy Intelligence · 2026</div>
     <h1>全球<em>电池产业</em>政策图谱</h1>
-    <p class="hd-sub">覆盖补贴、法规、关税三大维度，精细拆解中国、美国、欧盟各成员国、日本、韩国的最新政策动态，数据截至 2026年3月</p>
-    <div class="hd-stats">
-      <div><div class="hd-stat-n">18+</div><div class="hd-stat-l">覆盖国家 / 地区</div></div>
-      <div><div class="hd-stat-n">3</div><div class="hd-stat-l">政策维度</div></div>
-      <div><div class="hd-stat-n" style="color:#f87171">多项</div><div class="hd-stat-l">2026重大政策变化</div></div>
-      <div><div class="hd-stat-n">2030</div><div class="hd-stat-l">多国禁售燃油车目标</div></div>
+    <p class=&quot;hd-sub&quot;>覆盖补贴、法规、关税三大维度，精细拆解中国、美国、欧盟各成员国、日本、韩国的最新政策动态，数据截至 2026年3月</p>
+    <div class=&quot;hd-stats&quot;>
+      <div><div class=&quot;hd-stat-n&quot;>18+</div><div class=&quot;hd-stat-l&quot;>覆盖国家 / 地区</div></div>
+      <div><div class=&quot;hd-stat-n&quot;>3</div><div class=&quot;hd-stat-l&quot;>政策维度</div></div>
+      <div><div class=&quot;hd-stat-n&quot; style=&quot;color:#f87171&quot;>多项</div><div class=&quot;hd-stat-l&quot;>2026重大政策变化</div></div>
+      <div><div class=&quot;hd-stat-n&quot;>2030</div><div class=&quot;hd-stat-l&quot;>多国禁售燃油车目标</div></div>
     </div>
   </div>
-  <div class="hd-note">数据截至 2026年3月 | 仅供参考，请以各国官方最新发布为准</div>
+  <div class=&quot;hd-note&quot;>数据截至 2026年3月 | 仅供参考，请以各国官方最新发布为准</div>
 </div>
 
 <!-- ══ TICKER ══ -->
-<div class="ticker-bar">
-  <div class="ticker-label">
-    <span class="ticker-live"></span>政策快讯
+<div class=&quot;ticker-bar&quot;>
+  <div class=&quot;ticker-label&quot;>
+    <span class=&quot;ticker-live&quot;></span>政策快讯
   </div>
-  <div class="ticker-track-wrap">
-    <div class="ticker-track" id="ticker-track">
+  <div class=&quot;ticker-track-wrap&quot;>
+    <div class=&quot;ticker-track&quot; id=&quot;ticker-track&quot;>
       <!-- items injected by JS -->
     </div>
   </div>
-  <button class="ticker-pause" id="ticker-pause" title="暂停 / 继续">⏸</button>
+  <button class=&quot;ticker-pause&quot; id=&quot;ticker-pause&quot; title=&quot;暂停 / 继续&quot;>⏸</button>
 </div>
 
 <!-- ══ MAIN ══ -->
-<div class="main">
+<div class=&quot;main&quot;>
 
 <!-- ── METRIC ROW ── -->
-<div class="metric-row">
-  <div class="mc" style="--stripe:#ef4444">
-    <div style="position:absolute;top:0;left:0;right:0;height:4px;background:#ef4444;border-radius:12px 12px 0 0"></div>
-    <div class="mc-lbl">🇨🇳 中国 · 最高购车优惠</div>
-    <div class="mc-val">¥3.5万</div>
-    <div class="mc-sub">报废更新¥2万 + 购置税减1.5万（叠加）</div>
-    <div class="mc-badge badge-up">↑ 2026年持续执行</div>
+<div class=&quot;metric-row&quot;>
+  <div class=&quot;mc&quot; style=&quot;--stripe:#ef4444&quot;>
+    <div style=&quot;position:absolute;top:0;left:0;right:0;height:4px;background:#ef4444;border-radius:12px 12px 0 0&quot;></div>
+    <div class=&quot;mc-lbl&quot;>🇨🇳 中国 · 最高购车优惠</div>
+    <div class=&quot;mc-val&quot;>¥3.5万</div>
+    <div class=&quot;mc-sub&quot;>报废更新¥2万 + 购置税减1.5万（叠加）</div>
+    <div class=&quot;mc-badge badge-up&quot;>↑ 2026年持续执行</div>
   </div>
-  <div class="mc">
-    <div style="position:absolute;top:0;left:0;right:0;height:4px;background:#8b5cf6;border-radius:12px 12px 0 0"></div>
-    <div class="mc-lbl">🇺🇸 美国 · EV联邦税收抵免</div>
-    <div class="mc-val" style="color:#dc2626">$0</div>
-    <div class="mc-sub">$7,500 抵免已于2025年9月30日终止</div>
-    <div class="mc-badge badge-dn">↓ OBBB法案废除</div>
+  <div class=&quot;mc&quot;>
+    <div style=&quot;position:absolute;top:0;left:0;right:0;height:4px;background:#8b5cf6;border-radius:12px 12px 0 0&quot;></div>
+    <div class=&quot;mc-lbl&quot;>🇺🇸 美国 · EV联邦税收抵免</div>
+    <div class=&quot;mc-val&quot; style=&quot;color:#dc2626&quot;>$0</div>
+    <div class=&quot;mc-sub&quot;>$7,500 抵免已于2025年9月30日终止</div>
+    <div class=&quot;mc-badge badge-dn&quot;>↓ OBBB法案废除</div>
   </div>
-  <div class="mc">
-    <div style="position:absolute;top:0;left:0;right:0;height:4px;background:#ec4899;border-radius:12px 12px 0 0"></div>
-    <div class="mc-lbl">🇫🇷 法国 · 最高购车补贴</div>
-    <div class="mc-val">€7,000</div>
-    <div class="mc-sub">低收入群体，≈¥54,800 / 有效至2026年底</div>
-    <div class="mc-badge badge-up">↑ 收入分层发放</div>
+  <div class=&quot;mc&quot;>
+    <div style=&quot;position:absolute;top:0;left:0;right:0;height:4px;background:#ec4899;border-radius:12px 12px 0 0&quot;></div>
+    <div class=&quot;mc-lbl&quot;>🇫🇷 法国 · 最高购车补贴</div>
+    <div class=&quot;mc-val&quot;>€7,000</div>
+    <div class=&quot;mc-sub&quot;>低收入群体，≈¥54,800 / 有效至2026年底</div>
+    <div class=&quot;mc-badge badge-up&quot;>↑ 收入分层发放</div>
   </div>
-  <div class="mc">
-    <div style="position:absolute;top:0;left:0;right:0;height:4px;background:#3b82f6;border-radius:12px 12px 0 0"></div>
-    <div class="mc-lbl">🇩🇪 德国 · 补贴重启</div>
-    <div class="mc-val">€6,000</div>
-    <div class="mc-sub">1500–6000欧元，≤4.5万欧车型，无产地限制</div>
-    <div class="mc-badge badge-up">↑ 2026年重启计划</div>
+  <div class=&quot;mc&quot;>
+    <div style=&quot;position:absolute;top:0;left:0;right:0;height:4px;background:#3b82f6;border-radius:12px 12px 0 0&quot;></div>
+    <div class=&quot;mc-lbl&quot;>🇩🇪 德国 · 补贴重启</div>
+    <div class=&quot;mc-val&quot;>€6,000</div>
+    <div class=&quot;mc-sub&quot;>1500–6000欧元，≤4.5万欧车型，无产地限制</div>
+    <div class=&quot;mc-badge badge-up&quot;>↑ 2026年重启计划</div>
   </div>
-  <div class="mc">
-    <div style="position:absolute;top:0;left:0;right:0;height:4px;background:#f59e0b;border-radius:12px 12px 0 0"></div>
-    <div class="mc-lbl">日本 · 最高 CEV 补贴</div>
-    <div class="mc-val">130万日元</div>
-    <div class="mc-sub">丰田 bZ4X，≈¥6.5万 / 2026年1月起上调</div>
-    <div class="mc-badge badge-up">↑ 普遍上调 +20~40万</div>
+  <div class=&quot;mc&quot;>
+    <div style=&quot;position:absolute;top:0;left:0;right:0;height:4px;background:#f59e0b;border-radius:12px 12px 0 0&quot;></div>
+    <div class=&quot;mc-lbl&quot;>日本 · 最高 CEV 补贴</div>
+    <div class=&quot;mc-val&quot;>130万日元</div>
+    <div class=&quot;mc-sub&quot;>丰田 bZ4X，≈¥6.5万 / 2026年1月起上调</div>
+    <div class=&quot;mc-badge badge-up&quot;>↑ 普遍上调 +20~40万</div>
   </div>
 </div>
 
 <!-- ── CTRL BAR ── -->
-<div class="ctrl">
-  <div class="ctabs" id="cat-g">
-    <button class="ctab cat-on" data-cat="subsidy">补贴政策</button>
-    <button class="ctab" data-cat="regulation">法规标准</button>
-    <button class="ctab" data-cat="tariff">关税政策</button>
-    <button class="ctab" data-cat="chart">可视化对比</button>
-    <button class="ctab" data-cat="timeline">政策时间轴</button>
-    <button class="ctab" data-cat="eudetail">欧盟补贴详表</button>
+<div class=&quot;ctrl&quot;>
+  <div class=&quot;ctabs&quot; id=&quot;cat-g&quot;>
+    <button class=&quot;ctab cat-on&quot; data-cat=&quot;subsidy&quot;>补贴政策</button>
+    <button class=&quot;ctab&quot; data-cat=&quot;regulation&quot;>法规标准</button>
+    <button class=&quot;ctab&quot; data-cat=&quot;tariff&quot;>关税政策</button>
+    <button class=&quot;ctab&quot; data-cat=&quot;chart&quot;>可视化对比</button>
+    <button class=&quot;ctab&quot; data-cat=&quot;timeline&quot;>政策时间轴</button>
+    <button class=&quot;ctab&quot; data-cat=&quot;eudetail&quot;>欧盟补贴详表</button>
   </div>
-  <div class="ctabs" id="reg-g" style="margin-left:4px">
-    <button class="ctab on" data-r="all">全部</button>
-    <button class="ctab" data-r="CN">🇨🇳</button>
-    <button class="ctab" data-r="EU">🇪🇺</button>
-    <button class="ctab" data-r="US">🇺🇸</button>
-    <button class="ctab" data-r="JP">🇯🇵</button>
-    <button class="ctab" data-r="KR">🇰🇷</button>
+  <div class=&quot;ctabs&quot; id=&quot;reg-g&quot; style=&quot;margin-left:4px&quot;>
+    <button class=&quot;ctab on&quot; data-r=&quot;all&quot;>全部</button>
+    <button class=&quot;ctab&quot; data-r=&quot;CN&quot;>🇨🇳</button>
+    <button class=&quot;ctab&quot; data-r=&quot;EU&quot;>🇪🇺</button>
+    <button class=&quot;ctab&quot; data-r=&quot;US&quot;>🇺🇸</button>
+    <button class=&quot;ctab&quot; data-r=&quot;JP&quot;>🇯🇵</button>
+    <button class=&quot;ctab&quot; data-r=&quot;KR&quot;>🇰🇷</button>
   </div>
-  <div class="srch">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-    <input id="srch" type="text" placeholder="搜索政策关键词…">
+  <div class=&quot;srch&quot;>
+    <svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot;><circle cx=&quot;11&quot; cy=&quot;11&quot; r=&quot;8&quot;/><path d=&quot;m21 21-4.35-4.35&quot;/></svg>
+    <input id=&quot;srch&quot; type=&quot;text&quot; placeholder=&quot;搜索政策关键词…&quot;>
   </div>
 </div>
 
 <!-- ── SUBSIDY VIEW ── -->
-<div id="v-subsidy" class="view on">
-  <div class="country-grid" id="s-grid"></div>
+<div id=&quot;v-subsidy&quot; class=&quot;view on&quot;>
+  <div class=&quot;country-grid&quot; id=&quot;s-grid&quot;></div>
 </div>
 
 <!-- ── REGULATION VIEW ── -->
-<div id="v-regulation" class="view">
-  <div class="country-grid" id="r-grid"></div>
+<div id=&quot;v-regulation&quot; class=&quot;view&quot;>
+  <div class=&quot;country-grid&quot; id=&quot;r-grid&quot;></div>
 </div>
 
 <!-- ── TARIFF VIEW ── -->
-<div id="v-tariff" class="view">
+<div id=&quot;v-tariff&quot; class=&quot;view&quot;>
 
   <!-- ⚡ BREAKING NEWS BANNER ⚡ -->
-  <div style="background:linear-gradient(135deg,#052e16,#14532d);border:1.5px solid #22c55e;border-radius:14px;padding:22px 28px;margin-bottom:24px;position:relative;overflow:hidden">
-    <div style="position:absolute;top:0;right:0;width:220px;height:220px;border-radius:50%;background:rgba(34,197,94,.06);transform:translate(60px,-60px);pointer-events:none"></div>
-    <div style="display:flex;align-items:flex-start;gap:16px;position:relative;z-index:1">
-      <div style="flex-shrink:0;background:#22c55e;color:#fff;font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:700;letter-spacing:.1em;padding:5px 10px;border-radius:7px;line-height:1.3;text-align:center">⚡ 突发<br>逆转</div>
-      <div style="flex:1">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;flex-wrap:wrap">
-          <span style="font-family:'Space Grotesk',sans-serif;font-size:17px;font-weight:700;color:#f0fdf4">🇺🇸 美国对华石墨关税政策戏剧性反转</span>
-          <span style="background:rgba(34,197,94,.2);color:#86efac;border:1px solid rgba(34,197,94,.35);border-radius:20px;font-size:12px;font-weight:600;padding:3px 10px;font-family:'JetBrains Mono',monospace">2026年3月12日</span>
+  <div style=&quot;background:linear-gradient(135deg,#052e16,#14532d);border:1.5px solid #22c55e;border-radius:14px;padding:22px 28px;margin-bottom:24px;position:relative;overflow:hidden&quot;>
+    <div style=&quot;position:absolute;top:0;right:0;width:220px;height:220px;border-radius:50%;background:rgba(34,197,94,.06);transform:translate(60px,-60px);pointer-events:none&quot;></div>
+    <div style=&quot;display:flex;align-items:flex-start;gap:16px;position:relative;z-index:1&quot;>
+      <div style=&quot;flex-shrink:0;background:#22c55e;color:#fff;font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:700;letter-spacing:.1em;padding:5px 10px;border-radius:7px;line-height:1.3;text-align:center&quot;>⚡ 突发<br>逆转</div>
+      <div style=&quot;flex:1&quot;>
+        <div style=&quot;display:flex;align-items:center;gap:10px;margin-bottom:8px;flex-wrap:wrap&quot;>
+          <span style=&quot;font-family:'Space Grotesk',sans-serif;font-size:17px;font-weight:700;color:#f0fdf4&quot;>🇺🇸 美国对华石墨关税政策戏剧性反转</span>
+          <span style=&quot;background:rgba(34,197,94,.2);color:#86efac;border:1px solid rgba(34,197,94,.35);border-radius:20px;font-size:12px;font-weight:600;padding:3px 10px;font-family:'JetBrains Mono',monospace&quot;>2026年3月12日</span>
         </div>
-        <div style="font-size:15px;color:#bbf7d0;line-height:1.75;margin-bottom:14px">
-          美国国际贸易委员会（USITC）以 <strong style="color:#4ade80">2:1 投票</strong> 裁定：中国产活性阳极材料（锂电池负极关键材料）<strong style="color:#4ade80">未对美国国内产业造成实质性损害</strong>，一票否决了此前美国商务部拟加征的"双反"关税方案。
+        <div style=&quot;font-size:15px;color:#bbf7d0;line-height:1.75;margin-bottom:14px&quot;>
+          美国国际贸易委员会（USITC）以 <strong style=&quot;color:#4ade80&quot;>2:1 投票</strong> 裁定：中国产活性阳极材料（锂电池负极关键材料）<strong style=&quot;color:#4ade80&quot;>未对美国国内产业造成实质性损害</strong>，一票否决了此前美国商务部拟加征的&quot;双反&quot;关税方案。
         </div>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px">
-          <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:9px;padding:12px 14px">
-            <div style="font-size:11px;color:#86efac;font-family:'JetBrains Mono',monospace;letter-spacing:.06em;margin-bottom:5px">拟征关税（已作废）</div>
-            <div style="font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;color:#f87171;text-decoration:line-through;text-decoration-color:#ef4444">160.32%–169.58%</div>
-            <div style="font-size:12px;color:#94a3b8;margin-top:3px">美国商务部原提议的"双反"关税</div>
+        <div style=&quot;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px&quot;>
+          <div style=&quot;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:9px;padding:12px 14px&quot;>
+            <div style=&quot;font-size:11px;color:#86efac;font-family:'JetBrains Mono',monospace;letter-spacing:.06em;margin-bottom:5px&quot;>拟征关税（已作废）</div>
+            <div style=&quot;font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;color:#f87171;text-decoration:line-through;text-decoration-color:#ef4444&quot;>160.32%–169.58%</div>
+            <div style=&quot;font-size:12px;color:#94a3b8;margin-top:3px&quot;>美国商务部原提议的&quot;双反&quot;关税</div>
           </div>
-          <div style="background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.3);border-radius:9px;padding:12px 14px">
-            <div style="font-size:11px;color:#86efac;font-family:'JetBrains Mono',monospace;letter-spacing:.06em;margin-bottom:5px">实际执行关税</div>
-            <div style="font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;color:#4ade80">0%</div>
-            <div style="font-size:12px;color:#94a3b8;margin-top:3px">额外双反关税为零，裁定即时生效</div>
+          <div style=&quot;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.3);border-radius:9px;padding:12px 14px&quot;>
+            <div style=&quot;font-size:11px;color:#86efac;font-family:'JetBrains Mono',monospace;letter-spacing:.06em;margin-bottom:5px&quot;>实际执行关税</div>
+            <div style=&quot;font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;color:#4ade80&quot;>0%</div>
+            <div style=&quot;font-size:12px;color:#94a3b8;margin-top:3px&quot;>额外双反关税为零，裁定即时生效</div>
           </div>
-          <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:9px;padding:12px 14px">
-            <div style="font-size:11px;color:#86efac;font-family:'JetBrains Mono',monospace;letter-spacing:.06em;margin-bottom:5px">保证金处理</div>
-            <div style="font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;color:#f0fdf4">全额退还</div>
-            <div style="font-size:12px;color:#94a3b8;margin-top:3px">此前已缴纳的进口保证金将退还企业</div>
+          <div style=&quot;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:9px;padding:12px 14px&quot;>
+            <div style=&quot;font-size:11px;color:#86efac;font-family:'JetBrains Mono',monospace;letter-spacing:.06em;margin-bottom:5px&quot;>保证金处理</div>
+            <div style=&quot;font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;color:#f0fdf4&quot;>全额退还</div>
+            <div style=&quot;font-size:12px;color:#94a3b8;margin-top:3px&quot;>此前已缴纳的进口保证金将退还企业</div>
           </div>
-          <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:9px;padding:12px 14px">
-            <div style="font-size:11px;color:#86efac;font-family:'JetBrains Mono',monospace;letter-spacing:.06em;margin-bottom:5px">裁定机构 / 票型</div>
-            <div style="font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;color:#f0fdf4">USITC 2:1</div>
-            <div style="font-size:12px;color:#94a3b8;margin-top:3px">美国国际贸易委员会，以2:1多数票否决</div>
+          <div style=&quot;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:9px;padding:12px 14px&quot;>
+            <div style=&quot;font-size:11px;color:#86efac;font-family:'JetBrains Mono',monospace;letter-spacing:.06em;margin-bottom:5px&quot;>裁定机构 / 票型</div>
+            <div style=&quot;font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;color:#f0fdf4&quot;>USITC 2:1</div>
+            <div style=&quot;font-size:12px;color:#94a3b8;margin-top:3px&quot;>美国国际贸易委员会，以2:1多数票否决</div>
           </div>
         </div>
-        <div style="margin-top:12px;font-size:13px;color:#86efac;line-height:1.6">
-          ⚠ 注意：此裁定仅针对<strong style="color:#f0fdf4">活性阳极材料（负极关键材料）</strong>的双反关税，并不影响美国对华锂电池整体的301条款关税（25%）及对等关税（54%），综合税率仍约82.4%。
+        <div style=&quot;margin-top:12px;font-size:13px;color:#86efac;line-height:1.6&quot;>
+          ⚠ 注意：此裁定仅针对<strong style=&quot;color:#f0fdf4&quot;>活性阳极材料（负极关键材料）</strong>的双反关税，并不影响美国对华锂电池整体的301条款关税（25%）及对等关税（54%），综合税率仍约82.4%。
         </div>
       </div>
     </div>
   </div>
 
-  <div class="tleg">
-    <div class="tleg-i"><div class="tleg-d" style="background:#ef4444"></div>高壁垒（&gt;20%）</div>
-    <div class="tleg-i"><div class="tleg-d" style="background:#f59e0b"></div>中等（5–20%）</div>
-    <div class="tleg-i"><div class="tleg-d" style="background:#10b981"></div>低壁垒（&lt;5%）</div>
+  <div class=&quot;tleg&quot;>
+    <div class=&quot;tleg-i&quot;><div class=&quot;tleg-d&quot; style=&quot;background:#ef4444&quot;></div>高壁垒（&amp;gt;20%）</div>
+    <div class=&quot;tleg-i&quot;><div class=&quot;tleg-d&quot; style=&quot;background:#f59e0b&quot;></div>中等（5–20%）</div>
+    <div class=&quot;tleg-i&quot;><div class=&quot;tleg-d&quot; style=&quot;background:#10b981&quot;></div>低壁垒（&amp;lt;5%）</div>
   </div>
 
   <!-- 主五国品类关税表 -->
-  <div style="font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:600;color:#0f172a;margin-bottom:12px;display:flex;align-items:center;gap:8px">
-    <span style="width:4px;height:20px;background:#1677ff;border-radius:2px;display:inline-block"></span>
+  <div style=&quot;font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:600;color:#0f172a;margin-bottom:12px;display:flex;align-items:center;gap:8px&quot;>
+    <span style=&quot;width:4px;height:20px;background:#1677ff;border-radius:2px;display:inline-block&quot;></span>
     五国主要产品关税对比
   </div>
-  <div class="tft-wrap"><table class="tft" id="tft"></table></div>
-  <div class="tft-note" id="tft-note" style="margin-bottom:32px"></div>
+  <div class=&quot;tft-wrap&quot;><table class=&quot;tft&quot; id=&quot;tft&quot;></table></div>
+  <div class=&quot;tft-note&quot; id=&quot;tft-note&quot; style=&quot;margin-bottom:32px&quot;></div>
 
   <!-- 全球市场HS8507.60关税速查表 -->
-  <div style="font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:600;color:#0f172a;margin-bottom:6px;display:flex;align-items:center;gap:8px">
-    <span style="width:4px;height:20px;background:#f59e0b;border-radius:2px;display:inline-block"></span>
+  <div style=&quot;font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:600;color:#0f172a;margin-bottom:6px;display:flex;align-items:center;gap:8px&quot;>
+    <span style=&quot;width:4px;height:20px;background:#f59e0b;border-radius:2px;display:inline-block&quot;></span>
     全球主要市场对华电池Pack关税速查（HS 8507.60）
   </div>
-  <div style="font-size:14px;color:#64748b;margin-bottom:14px">覆盖19个主要目的地市场，数据截至2026年3月</div>
-  <div class="tft-wrap" style="margin-bottom:16px"><table class="tft" id="global-tft"></table></div>
+  <div style=&quot;font-size:14px;color:#64748b;margin-bottom:14px&quot;>覆盖19个主要目的地市场，数据截至2026年3月</div>
+  <div class=&quot;tft-wrap&quot; style=&quot;margin-bottom:16px&quot;><table class=&quot;tft&quot; id=&quot;global-tft&quot;></table></div>
 
   <!-- 中国出口管制说明框 -->
-  <div style="background:linear-gradient(135deg,#0f172a,#1e3a5f);border-radius:14px;padding:24px 28px;color:#f1f5f9;margin-bottom:8px">
-    <div style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:600;margin-bottom:14px;display:flex;align-items:center;gap:8px">
-      <span style="background:rgba(239,68,68,.25);color:#fca5a5;border-radius:6px;padding:3px 10px;font-size:12px;font-weight:700;letter-spacing:.06em">NEW</span>
+  <div style=&quot;background:linear-gradient(135deg,#0f172a,#1e3a5f);border-radius:14px;padding:24px 28px;color:#f1f5f9;margin-bottom:8px&quot;>
+    <div style=&quot;font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:600;margin-bottom:14px;display:flex;align-items:center;gap:8px&quot;>
+      <span style=&quot;background:rgba(239,68,68,.25);color:#fca5a5;border-radius:6px;padding:3px 10px;font-size:12px;font-weight:700;letter-spacing:.06em&quot;>NEW</span>
       中国出口管制新政（2025年11月8日生效）
     </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax:280px,1fr));gap:16px">
-      <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:16px">
-        <div style="font-weight:600;font-size:14px;margin-bottom:8px;color:#93c5fd">⚡ 锂电池（有限制）</div>
-        <div style="font-size:13px;color:#94a3b8;line-height:1.7">重量能量密度 <strong style="color:#f1f5f9">≥300 Wh/kg</strong> 的高端产品（半固态/固态电池）须申请出口许可。<strong style="color:#86efac">主流液态电池（~260Wh/kg）暂不受影响。</strong></div>
+    <div style=&quot;display:grid;grid-template-columns:repeat(auto-fit,minmax:280px,1fr));gap:16px&quot;>
+      <div style=&quot;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:16px&quot;>
+        <div style=&quot;font-weight:600;font-size:14px;margin-bottom:8px;color:#93c5fd&quot;>⚡ 锂电池（有限制）</div>
+        <div style=&quot;font-size:13px;color:#94a3b8;line-height:1.7&quot;>重量能量密度 <strong style=&quot;color:#f1f5f9&quot;>≥300 Wh/kg</strong> 的高端产品（半固态/固态电池）须申请出口许可。<strong style=&quot;color:#86efac&quot;>主流液态电池（~260Wh/kg）暂不受影响。</strong></div>
       </div>
-      <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:16px">
-        <div style="font-weight:600;font-size:14px;margin-bottom:8px;color:#93c5fd">🔋 正极材料（受限）</div>
-        <div style="font-size:13px;color:#94a3b8;line-height:1.7">高压实密度 <strong style="color:#f1f5f9">≥2.5g/cm³</strong> 的磷酸铁锂、三元前驱体及富锂锰基正极须许可；相关生产设备（辊道窑、高速混料机）同步受管。正极材料制备技术纳入出口限制技术目录。</div>
+      <div style=&quot;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:16px&quot;>
+        <div style=&quot;font-weight:600;font-size:14px;margin-bottom:8px;color:#93c5fd&quot;>🔋 正极材料（受限）</div>
+        <div style=&quot;font-size:13px;color:#94a3b8;line-height:1.7&quot;>高压实密度 <strong style=&quot;color:#f1f5f9&quot;>≥2.5g/cm³</strong> 的磷酸铁锂、三元前驱体及富锂锰基正极须许可；相关生产设备（辊道窑、高速混料机）同步受管。正极材料制备技术纳入出口限制技术目录。</div>
       </div>
-      <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:16px">
-        <div style="font-weight:600;font-size:14px;margin-bottom:8px;color:#93c5fd">⬛ 负极材料（受限）</div>
-        <div style="font-size:13px;color:#94a3b8;line-height:1.7"><strong style="color:#f1f5f9">人造石墨负极及天然/人造混合材料</strong>须许可；造粒/石墨化/包覆核心工序设备受管；卤水提锂、锂辉石提锂技术纳入限制目录。</div>
+      <div style=&quot;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:16px&quot;>
+        <div style=&quot;font-weight:600;font-size:14px;margin-bottom:8px;color:#93c5fd&quot;>⬛ 负极材料（受限）</div>
+        <div style=&quot;font-size:13px;color:#94a3b8;line-height:1.7&quot;><strong style=&quot;color:#f1f5f9&quot;>人造石墨负极及天然/人造混合材料</strong>须许可；造粒/石墨化/包覆核心工序设备受管；卤水提锂、锂辉石提锂技术纳入限制目录。</div>
       </div>
-      <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:16px">
-        <div style="font-weight:600;font-size:14px;margin-bottom:8px;color:#93c5fd">🏭 制造设备（受限）</div>
-        <div style="font-size:13px;color:#94a3b8;line-height:1.7"><strong style="color:#f1f5f9">卷绕机、叠片机、注液机、热压机、化成分容系统</strong>等电芯核心装备须许可。<strong style="color:#86efac">模组与Pack设备不在管制范围内。</strong></div>
+      <div style=&quot;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:16px&quot;>
+        <div style=&quot;font-weight:600;font-size:14px;margin-bottom:8px;color:#93c5fd&quot;>🏭 制造设备（受限）</div>
+        <div style=&quot;font-size:13px;color:#94a3b8;line-height:1.7&quot;><strong style=&quot;color:#f1f5f9&quot;>卷绕机、叠片机、注液机、热压机、化成分容系统</strong>等电芯核心装备须许可。<strong style=&quot;color:#86efac&quot;>模组与Pack设备不在管制范围内。</strong></div>
       </div>
     </div>
   </div>
 </div>
 
 <!-- ── CHARTS VIEW ── -->
-<div id="v-chart" class="view">
-  <div class="cg2" style="margin-bottom:20px">
-    <div class="chart-card">
-      <div class="chart-ttl">综合政策雷达图</div>
-      <div class="chart-sub">五国八维度全面评分对比</div>
-      <div class="chart-wrap" style="height:340px"><canvas id="radarC"></canvas></div>
+<div id=&quot;v-chart&quot; class=&quot;view&quot;>
+  <div class=&quot;cg2&quot; style=&quot;margin-bottom:20px&quot;>
+    <div class=&quot;chart-card&quot;>
+      <div class=&quot;chart-ttl&quot;>综合政策雷达图</div>
+      <div class=&quot;chart-sub&quot;>五国八维度全面评分对比</div>
+      <div class=&quot;chart-wrap&quot; style=&quot;height:340px&quot;><canvas id=&quot;radarC&quot;></canvas></div>
     </div>
-    <div class="chart-card">
-      <div class="chart-ttl">EV 购车最高补贴对比</div>
-      <div class="chart-sub">各国最高可获补贴金额（万元人民币等值）</div>
-      <div class="chart-wrap" style="height:340px"><canvas id="subBar"></canvas></div>
-    </div>
-  </div>
-  <div class="cg4">
-    <div class="chart-card">
-      <div class="chart-ttl">关税壁垒对比</div>
-      <div class="chart-sub">各国对中国电池产品进口关税率（%）</div>
-      <div class="chart-wrap" style="height:300px"><canvas id="tarBar"></canvas></div>
-    </div>
-    <div class="chart-card">
-      <div class="chart-ttl">法规 × 补贴 战略矩阵</div>
-      <div class="chart-sub">气泡大小 = EV 补贴金额 | 点击标签可筛选</div>
-      <div class="chart-wrap" style="height:300px"><canvas id="bubC"></canvas></div>
+    <div class=&quot;chart-card&quot;>
+      <div class=&quot;chart-ttl&quot;>EV 购车最高补贴对比</div>
+      <div class=&quot;chart-sub&quot;>各国最高可获补贴金额（万元人民币等值）</div>
+      <div class=&quot;chart-wrap&quot; style=&quot;height:340px&quot;><canvas id=&quot;subBar&quot;></canvas></div>
     </div>
   </div>
-  <div class="chart-card" style="margin-top:20px">
-    <div class="chart-ttl">自定义维度横向对比表</div>
-    <div class="chart-sub" style="margin-bottom:14px">选择维度进行对比</div>
-    <div class="sel-row" id="sel-r"></div>
-    <div class="cmp-wrap"><table class="cmp" id="cmp-t"></table></div>
+  <div class=&quot;cg4&quot;>
+    <div class=&quot;chart-card&quot;>
+      <div class=&quot;chart-ttl&quot;>关税壁垒对比</div>
+      <div class=&quot;chart-sub&quot;>各国对中国电池产品进口关税率（%）</div>
+      <div class=&quot;chart-wrap&quot; style=&quot;height:300px&quot;><canvas id=&quot;tarBar&quot;></canvas></div>
+    </div>
+    <div class=&quot;chart-card&quot;>
+      <div class=&quot;chart-ttl&quot;>法规 × 补贴 战略矩阵</div>
+      <div class=&quot;chart-sub&quot;>气泡大小 = EV 补贴金额 | 点击标签可筛选</div>
+      <div class=&quot;chart-wrap&quot; style=&quot;height:300px&quot;><canvas id=&quot;bubC&quot;></canvas></div>
+    </div>
+  </div>
+  <div class=&quot;chart-card&quot; style=&quot;margin-top:20px&quot;>
+    <div class=&quot;chart-ttl&quot;>自定义维度横向对比表</div>
+    <div class=&quot;chart-sub&quot; style=&quot;margin-bottom:14px&quot;>选择维度进行对比</div>
+    <div class=&quot;sel-row&quot; id=&quot;sel-r&quot;></div>
+    <div class=&quot;cmp-wrap&quot;><table class=&quot;cmp&quot; id=&quot;cmp-t&quot;></table></div>
   </div>
 </div>
 
 <!-- ── TIMELINE VIEW (新增) ── -->
-<div id="v-timeline" class="view">
-  <div style="margin-bottom:24px">
-    <div class="sec-ey">Policy Timeline · 政策时间轴</div>
-    <div style="font-size:15px;color:#475569;line-height:1.7;max-width:800px">以时间轴形式对比2024–2026年间全球电池产业的重大政策逆转与积极进展，便于快速把握关键节点。</div>
+<div id=&quot;v-timeline&quot; class=&quot;view&quot;>
+  <div style=&quot;margin-bottom:24px&quot;>
+    <div class=&quot;sec-ey&quot;>Policy Timeline · 政策时间轴</div>
+    <div style=&quot;font-size:15px;color:#475569;line-height:1.7;max-width:800px&quot;>以时间轴形式对比2024–2026年间全球电池产业的重大政策逆转与积极进展，便于快速把握关键节点。</div>
   </div>
-  <div class="tl-cols">
+  <div class=&quot;tl-cols&quot;>
     <div>
-      <div class="tl-col-hd" style="color:#ef4444">🔴 重大政策逆转 / 负面事件</div>
-      <div class="tl-timeline" id="tl-bad-list"></div>
+      <div class=&quot;tl-col-hd&quot; style=&quot;color:#ef4444&quot;>🔴 重大政策逆转 / 负面事件</div>
+      <div class=&quot;tl-timeline&quot; id=&quot;tl-bad-list&quot;></div>
     </div>
     <div>
-      <div class="tl-col-hd" style="color:#16a34a">🟢 积极政策进展 / 利好事件</div>
-      <div class="tl-timeline" id="tl-good-list"></div>
+      <div class=&quot;tl-col-hd&quot; style=&quot;color:#16a34a&quot;>🟢 积极政策进展 / 利好事件</div>
+      <div class=&quot;tl-timeline&quot; id=&quot;tl-good-list&quot;></div>
     </div>
   </div>
 </div>
 
 <!-- ── EU DETAIL VIEW ── -->
-<div id="v-eudetail" class="view">
-  <div style="margin-bottom:18px">
-    <div class="sec-ey">EU Member States · 逐国补贴详情</div>
-    <div style="font-size:16px;color:#475569;max-width:820px;line-height:1.7">
+<div id=&quot;v-eudetail&quot; class=&quot;view&quot;>
+  <div style=&quot;margin-bottom:18px&quot;>
+    <div class=&quot;sec-ey&quot;>EU Member States · 逐国补贴详情</div>
+    <div style=&quot;font-size:16px;color:#475569;max-width:820px;line-height:1.7&quot;>
       下表拆解欧盟各成员国的电动车补贴政策，包括金额、适用条件、车价上限及有效期，方便出口企业逐国对标。
     </div>
   </div>
-  <div class="eut-wrap">
-    <table class="eut">
+  <div class=&quot;eut-wrap&quot;>
+    <table class=&quot;eut&quot;>
       <thead>
         <tr>
           <th>国家</th>
@@ -565,21 +648,21 @@ footer em{color:#3b82f6;font-style:normal}
           <th>状态</th>
         </tr>
       </thead>
-      <tbody id="eu-tbody"></tbody>
+      <tbody id=&quot;eu-tbody&quot;></tbody>
     </table>
   </div>
-  <div style="margin-top:16px;padding:16px 20px;background:#fff;border:1px solid var(--border);border-radius:var(--r);font-size:13.5px;color:#475569;line-height:1.8;box-shadow:var(--sh)">
-    <strong style="color:#1e293b">⚠ 重要提示（2026年2月起）：</strong>欧盟新规要求享受公共补贴的电动车须满足"欧洲制造"标准——整车在欧盟境内组装，且至少 <strong>70% 零部件（不含电池）须产自欧盟</strong>；电池关键组件亦须源自欧盟。这意味着完全在中国生产的车型，可能无法申请部分成员国的政府补贴，但<strong>德国</strong>目前明确无产地歧视。
+  <div style=&quot;margin-top:16px;padding:16px 20px;background:#fff;border:1px solid var(--border);border-radius:var(--r);font-size:13.5px;color:#475569;line-height:1.8;box-shadow:var(--sh)&quot;>
+    <strong style=&quot;color:#1e293b&quot;>⚠ 重要提示（2026年2月起）：</strong>欧盟新规要求享受公共补贴的电动车须满足&quot;欧洲制造&quot;标准——整车在欧盟境内组装，且至少 <strong>70% 零部件（不含电池）须产自欧盟</strong>；电池关键组件亦须源自欧盟。这意味着完全在中国生产的车型，可能无法申请部分成员国的政府补贴，但<strong>德国</strong>目前明确无产地歧视。
   </div>
 </div>
 
 </div><!-- /main -->
 
 <footer>
-  <p>数据来源：各国官方政策文件 · IEA Global EV Outlook · 欧洲电池法 EU 2023/1542 &nbsp;|&nbsp; 本页面仅供参考，政策以<em>各国官方最新发布</em>为准 &nbsp;|&nbsp; 数据截至 <em>2026年3月</em></p>
+  <p>数据来源：各国官方政策文件 · IEA Global EV Outlook · 欧洲电池法 EU 2023/1542 &amp;nbsp;|&amp;nbsp; 本页面仅供参考，政策以<em>各国官方最新发布</em>为准 &amp;nbsp;|&amp;nbsp; 数据截至 <em>2026年3月</em></p>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js&quot;></script>
 <script>
 // ═══════════════════════════════════════════════════════════════
 //  MASTER DATA  (全部更新至2026年3月)
@@ -600,7 +683,7 @@ const SUBSIDY=[
      {k:'废旧电池回收价格',v:'50度组2–3万，容量>80%可+30%',cls:'vg'},
    ],
    notice:'【2026年3月最新】购置税减半阶段（2026–2027年），乘用车每辆最高减1.5万元；商务部2026年以旧换新细则已落地：报废更新上限2万元、置换更新上限1.5万元；充电基础设施补贴覆盖建设、运营、升级三环节，农村地区补贴比城市高20%；换电模式车辆可按不含电池价格计税。'},
-  {r:'EU',flag:'🇩🇪',name:'欧盟（德国）',dept:'联邦经济气候行动部 BMWK',score:75,color:'#3b82f6',
+  {r:'EU',flag:'🇪🇺',name:'欧盟（德国）',dept:'联邦经济气候行动部 BMWK',score:75,color:'#3b82f6',
    tags:[{t:'补贴重启',c:'tg'},{t:'无产地歧视',c:'tg'},{t:'1500–6000欧元',c:'tb'}],
    items:[
      {k:'德国EV补贴（重启）',v:'1500–6000欧元，无产地歧视',cls:'vg'},
@@ -679,7 +762,7 @@ const SUBSIDY=[
      {k:'45X电池生产抵免',v:'状态不明，面临削减风险',cls:'va'},
      {k:'DOE贷款担保计划',v:'大幅收缩，审批停滞',cls:'vr'},
    ],
-   notice:'【2026年3月最新·重大逆转】特朗普"大而美"法案（OBBB）系统性拆解IRA：$7,500 EV税收抵免已于2025年9月30日终止，比原计划提前7年取消；所有车企例外延期条款同步废除；预计EV销量短期下降约27%；新增EV注册费以"弥补公路基金缺口"，政策全面逆转。'},
+   notice:'【2026年3月最新·重大逆转】特朗普&quot;大而美&quot;法案（OBBB）系统性拆解IRA：$7,500 EV税收抵免已于2025年9月30日终止，比原计划提前7年取消；所有车企例外延期条款同步废除；预计EV销量短期下降约27%；新增EV注册费以&quot;弥补公路基金缺口&quot;，政策全面逆转。'},
   {r:'JP',flag:'🇯🇵',name:'日本',dept:'经济产业省 METI / 次世代自動車振興センター',score:74,color:'#f59e0b',
    tags:[{t:'补贴大幅上调',c:'tg'},{t:'GI基金2万亿',c:'tb'},{t:'全固态电池战略',c:'tg'},{t:'BYD最低',c:'ta'}],
    items:[
@@ -703,7 +786,7 @@ const SUBSIDY=[
      {k:'燃油车置换改装补贴',v:'额外追加100万韩元',cls:'vg'},
      {k:'2027年起新门槛（预告）',v:'>5000万半额；>8000万取消',cls:'va'},
    ],
-   notice:'【2026年最新】韩国EV补贴全面转向"选择性精准支持"：国家上限从800万降至580万韩元，全额补贴门槛从6000万收紧至5300万；同步强化低收入、青年首次购车、多子女家庭额外20%，燃油车置换追加100万；2027年起进一步收紧价格门槛。'}
+   notice:'【2026年最新】韩国EV补贴全面转向&quot;选择性精准支持&quot;：国家上限从800万降至580万韩元，全额补贴门槛从6000万收紧至5300万；同步强化低收入、青年首次购车、多子女家庭额外20%，燃油车置换追加100万；2027年起进一步收紧价格门槛。'}
 ];
 
 const REGULATION=[
@@ -718,7 +801,7 @@ const REGULATION=[
      {k:'电池溯源管理',v:'全生命周期强制追溯，头部企业已覆盖',cls:'vg'},
      {k:'储能电站安全标准',v:'GB/T 42288-2022 持续执行',cls:'vg'},
    ],
-   notice:'【2026年3月最新·史上最严】GB 38031-2025已于2025年4月发布，2026年7月1日起强制实施：①热扩散从"5分钟报警"升级为"不起火不爆炸+2小时观察"；②新增底部撞击测试（30mm钢球150J×3次）；③新增300次快充循环后安全测试；④含交流电路绝缘要求≥500Ω/V。<br><a href="https://www.chinesestandard.net/PDFExample/GB38031-2020EN.pdf" target="_blank" style="color:#2563eb;font-size:12px;text-decoration:underline">📄 参考原文（GB 38031-2020英文版示例）→</a>'},
+   notice:'【2026年3月最新·史上最严】GB 38031-2025已于2025年4月发布，2026年7月1日起强制实施：①热扩散从&quot;5分钟报警&quot;升级为&quot;不起火不爆炸+2小时观察&quot;；②新增底部撞击测试（30mm钢球150J×3次）；③新增300次快充循环后安全测试；④含交流电路绝缘要求≥500Ω/V。<br><a href=&quot;https://www.chinesestandard.net/PDFExample/GB38031-2020EN.pdf&quot; target=&quot;_blank&quot; style=&quot;color:#2563eb;font-size:12px;text-decoration:underline&quot;>📄 参考原文（GB 38031-2020英文版示例）→</a>'},
   {r:'EU',flag:'🇪🇺',name:'欧盟',dept:'欧洲标准化委员会 CEN/CENELEC',score:95,color:'#0ea5e9',
    tags:[{t:'史上最严电池法',c:'tr'},{t:'护照2026年2月已强制',c:'tr'},{t:'欧洲制造门槛',c:'ta'},{t:'供应链尽调',c:'ta'}],
    items:[
@@ -729,7 +812,7 @@ const REGULATION=[
      {k:'EV电池容量声明',v:'80%保持率强制声明',cls:'vg'},
      {k:'供应链尽职调查',v:'原材料来源强制审查',cls:'vr'},
    ],
-   notice:'【2026年3月最新】电池护照已于2026年2月17日正式强制，所有>2kWh电池须配备护照方可在EEA销售；同步"欧洲制造"门槛：整车须欧盟组装且≥70%非电池零部件源自欧盟，电池关键组件也须源自欧盟。碳足迹国际互认体系尚未建立，中小企业合规成本高企。<br><a href="https://circulareconomy.europa.eu/platform/sites/default/files/2024-03/1qp5rxiZ-CEPS-InDepthAnalysis-2024-05_Implementing-the-EU-digital-battery-passport.pdf" target="_blank" style="color:#2563eb;font-size:12px;text-decoration:underline">📄 参考原文：欧盟数字电池护照实施深度分析报告（CEPS 2024）→</a><br><a href="https://zhuanlan.zhihu.com/p/32669802422" target="_blank" style="color:#2563eb;font-size:12px;text-decoration:underline">📖 延伸阅读：欧盟新电池法解读（知乎）→</a>'},
+   notice:'【2026年3月最新】电池护照已于2026年2月17日正式强制，所有>2kWh电池须配备护照方可在EEA销售；同步&quot;欧洲制造&quot;门槛：整车须欧盟组装且≥70%非电池零部件源自欧盟，电池关键组件也须源自欧盟。碳足迹国际互认体系尚未建立，中小企业合规成本高企。<br><a href=&quot;https://circulareconomy.europa.eu/platform/sites/default/files/2024-03/1qp5rxiZ-CEPS-InDepthAnalysis-2024-05_Implementing-the-EU-digital-battery-passport.pdf&quot; target=&quot;_blank&quot; style=&quot;color:#2563eb;font-size:12px;text-decoration:underline&quot;>📄 参考原文：欧盟数字电池护照实施深度分析报告（CEPS 2024）→</a><br><a href=&quot;https://zhuanlan.zhihu.com/p/32669802422&quot; target=&quot;_blank&quot; style=&quot;color:#2563eb;font-size:12px;text-decoration:underline&quot;>📖 延伸阅读：欧盟新电池法解读（知乎）→</a>'},
   {r:'US',flag:'🇺🇸',name:'美国',dept:'NHTSA / UL / EPA（大幅削减）',score:45,color:'#8b5cf6',
    tags:[{t:'EPA危害认定已撤销',c:'tr'},{t:'温室气体监管崩塌',c:'tr'},{t:'CARB受冲击',c:'tr'},{t:'UL产品安全维持',c:'tb'}],
    items:[
@@ -740,7 +823,7 @@ const REGULATION=[
      {k:'FMVSS 305电池安全',v:'联邦机动车安全标准，仍有效',cls:'vg'},
      {k:'UL 9540A热失控测试',v:'储能系统强制测试，仍有效',cls:'vg'},
    ],
-   notice:'【2026年3月最新·重大逆转】2026年2月12日特朗普正式撤销EPA"温室气体危害认定"——该认定是奥巴马时代依《清洁空气法》授权EPA监管温室气体的法律基石，撤销后EPA不再具有法定依据。特朗普政府称其为"美国史上最大规模放松监管举措"，预计节省1.3万亿美元监管成本。'},
+   notice:'【2026年3月最新·重大逆转】2026年2月12日特朗普正式撤销EPA&quot;温室气体危害认定&quot;——该认定是奥巴马时代依《清洁空气法》授权EPA监管温室气体的法律基石，撤销后EPA不再具有法定依据。特朗普政府称其为&quot;美国史上最大规模放松监管举措&quot;，预计节省1.3万亿美元监管成本。'},
   {r:'JP',flag:'🇯🇵',name:'日本',dept:'国土交通省 / 経産省 / NITE',score:72,color:'#f59e0b',
    tags:[{t:'JIS GHS第9版2025更新',c:'tb'},{t:'附录12认证截止',c:'ta'},{t:'PSE强制认证',c:'tb'},{t:'国际标准协调',c:'tg'}],
    items:[
@@ -762,7 +845,7 @@ const REGULATION=[
      {k:'Samsung SDI×KESCO MOU',v:'2025年签署，共建安全ESS生态体系',cls:'vg'},
      {k:'KC安全认证',v:'电池产品强制认证',cls:'vg'},
    ],
-   notice:'【2026年3月最新】韩国ESS安全新规持续落地：强制接地故障检测、灭火及内压缓解装置全面实施；政府540MW ESS招标设严格技术门槛（连续放电6h、年循环383次），首轮须在2026年底投运；Samsung SDI与KESCO 2025年签署MOU共建"安全ESS生态体系"。'}
+   notice:'【2026年3月最新】韩国ESS安全新规持续落地：强制接地故障检测、灭火及内压缓解装置全面实施；政府540MW ESS招标设严格技术门槛（连续放电6h、年循环383次），首轮须在2026年底投运；Samsung SDI与KESCO 2025年签署MOU共建&quot;安全ESS生态体系&quot;。'}
 ];
 
 const TARIFF={
@@ -812,7 +895,7 @@ const TARIFF={
     ]},
   ],
   note:`<strong>关税数据截至2026年3月20日（最新）。</strong><br>
-  ① <strong style="color:#dc2626">美国对华电池Pack关税（日内瓦协议后）</strong>：车用动力电池 ≈58.4%，非车用储能电池 ≈41%（2025年5月12日中美日内瓦会谈后从峰值82.4%回调）。2025年4月曾短暂出现82.4%甚至173.4%极端税率（叠加34%或125%对等关税），日内瓦协议后已大幅回调；<br>
+  ① <strong style=&quot;color:#dc2626&quot;>美国对华电池Pack关税（日内瓦协议后）</strong>：车用动力电池 ≈58.4%，非车用储能电池 ≈41%（2025年5月12日中美日内瓦会谈后从峰值82.4%回调）。2025年4月曾短暂出现82.4%甚至173.4%极端税率（叠加34%或125%对等关税），日内瓦协议后已大幅回调；<br>
   ② <strong>欧盟对华电池单体/Pack基础税率仅2.7%（MFN）</strong>，未被纳入整车反补贴措施；整车另加17%–36.3%反补贴税；英国2.0%；<br>
   ③ <strong>日本和韩国对电池Pack实行免税（0%）</strong>，但韩国附加细分Pack监管条款；<br>
   ④ <strong>2026年3月12日USITC否决</strong>对华活性阳极材料160%–170%双反税，已缴保证金将退还；<br>
@@ -873,9 +956,9 @@ const METRICS=[
 // ═══════════════════════════════════════════════════════════════
 const TL_BAD=[
   {date:'2025年9月30日',title:'美国EV $7,500税收抵免终止',chip:'重大逆转',cC:'#dc2626',cB:'#fee2e2',dot:'tl-dot-red',body:'tl-body-red',
-   text:'特朗普"大而美"法案（OBBB）废除IRA核心条款，比原计划提前7年取消；预计EV销量短期下降约27%；所有车企例外延期条款同步废除。'},
+   text:'特朗普&quot;大而美&quot;法案（OBBB）废除IRA核心条款，比原计划提前7年取消；预计EV销量短期下降约27%；所有车企例外延期条款同步废除。'},
   {date:'2026年2月12日',title:'美国EPA温室气体危害认定被撤销',chip:'监管崩塌',cC:'#dc2626',cB:'#fee2e2',dot:'tl-dot-red',body:'tl-body-red',
-   text:'特朗普政府正式撤销EPA"温室气体危害认定"，EPA失去监管温室气体的法律依据；联邦汽车温室气体标准形同虚设，称为"美国史上最大规模放松监管举措"。'},
+   text:'特朗普政府正式撤销EPA&quot;温室气体危害认定&quot;，EPA失去监管温室气体的法律依据；联邦汽车温室气体标准形同虚设，称为&quot;美国史上最大规模放松监管举措&quot;。'},
   {date:'2025年4月10日',title:'中国对美全面反制加征34%关税',chip:'贸易对抗',cC:'#d97706',cB:'#fef3c7',dot:'tl-dot-amb',body:'tl-body-amb',
    text:'中国对全部美国输华商品加征34%额外关税，配套7类稀土出口管制（钐/钆/铽/镝/镥/钪/钇）及WTO起诉，中美贸易战全面升级。'},
   {date:'2024年10月',title:'欧盟对华整车反补贴税转正',chip:'贸易壁垒',cC:'#d97706',cB:'#fef3c7',dot:'tl-dot-amb',body:'tl-body-amb',
@@ -893,7 +976,7 @@ const TL_GOOD=[
   {date:'2026年（重启）',title:'德国重启EV补贴计划',chip:'利好中国品牌',cC:'#16a34a',cB:'#dcfce7',dot:'tl-dot-grn',body:'tl-body-grn',
    text:'重启30–40亿欧元专项补贴，额度1500–6000欧元，明确无产地歧视，中国车企可同等申请，是欧盟内对华最友好的市场之一。'},
   {date:'2025年4月发布',title:'中国GB 38031-2025史上最严电池安全标准',chip:'标准升级',cC:'#1677ff',cB:'#dbeafe',dot:'tl-dot-grn',body:'tl-body-grn',
-   text:'2026年7月1日强制实施：热扩散从"5分钟报警"升级为"不起火不爆炸+2小时观察"；新增底部撞击测试和300次快充循环安全测试。'},
+   text:'2026年7月1日强制实施：热扩散从&quot;5分钟报警&quot;升级为&quot;不起火不爆炸+2小时观察&quot;；新增底部撞击测试和300次快充循环安全测试。'},
 ];
 
 // ═══════════════════════════════════════════════════════════════
@@ -907,28 +990,28 @@ let ST={cat:'subsidy',r:'all',q:'',sel:new Set(['sub','reg','tc','ev'])};
 function cardHTML(d,i){
   const C=2*Math.PI*17;
   const off=C*(1-d.score/100);
-  const tagsH=d.tags.map(t=>`<span class="tag ${t.c}">${t.t}</span>`).join('');
+  const tagsH=d.tags.map(t=>`<span class=&quot;tag ${t.c}&quot;>${t.t}</span>`).join('');
   const clsColor={'vg':'#16a34a','va':'#d97706','vr':'#dc2626','vb':'#2563eb'};
-  const kvsH=d.items.map(it=>`<div class="kv"><div class="kk">${it.k}</div><div class="kv-val" style="color:${clsColor[it.cls]||'#334155'}">${it.v}</div></div>`).join('');
+  const kvsH=d.items.map(it=>`<div class=&quot;kv&quot;><div class=&quot;kk&quot;>${it.k}</div><div class=&quot;kv-val&quot; style=&quot;color:${clsColor[it.cls]||'#334155'}&quot;>${it.v}</div></div>`).join('');
   const updM=d.notice.match(/^【(.+?)】/);
-  const updBadge=updM?`<div class="upd-badge"><span class="upd-dot"></span>${updM[1]}</div>`:'';
+  const updBadge=updM?`<div class=&quot;upd-badge&quot;><span class=&quot;upd-dot&quot;></span>${updM[1]}</div>`:'';
   const noticeText=d.notice.replace(/^【.+?】/,'');
-  return `<div class="pc" style="animation-delay:${i*45}ms;opacity:0;animation:pcIn .3s ease ${i*45}ms forwards">
+  return `<div class=&quot;pc&quot; style=&quot;animation-delay:${i*45}ms;opacity:0;animation:pcIn .3s ease ${i*45}ms forwards&quot;>
     <style>.pc{animation:pcIn .3s ease forwards}@keyframes pcIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}</style>
-    <div class="pc-stripe" style="background:${d.color}"></div>
-    <div class="pc-head">
-      <div class="pc-flag">${d.flag}</div>
-      <div style="flex:1"><div class="pc-name">${d.name}</div><div class="pc-dept">${d.dept}</div></div>
-      <div class="pc-score">
-        <svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="17" fill="none" stroke="#e2e8f0" stroke-width="4"/>
-        <circle cx="22" cy="22" r="17" fill="none" stroke="${d.color}" stroke-width="4"
-          stroke-linecap="round" stroke-dasharray="${C.toFixed(1)}" stroke-dashoffset="${off.toFixed(1)}"/></svg>
-        <div class="pc-score-n">${d.score}</div>
+    <div class=&quot;pc-stripe&quot; style=&quot;background:${d.color}&quot;></div>
+    <div class=&quot;pc-head&quot;>
+      <div class=&quot;pc-flag&quot;>${d.flag}</div>
+      <div style=&quot;flex:1&quot;><div class=&quot;pc-name&quot;>${d.name}</div><div class=&quot;pc-dept&quot;>${d.dept}</div></div>
+      <div class=&quot;pc-score&quot;>
+        <svg viewBox=&quot;0 0 44 44&quot;><circle cx=&quot;22&quot; cy=&quot;22&quot; r=&quot;17&quot; fill=&quot;none&quot; stroke=&quot;#e2e8f0&quot; stroke-width=&quot;4&quot;/>
+        <circle cx=&quot;22&quot; cy=&quot;22&quot; r=&quot;17&quot; fill=&quot;none&quot; stroke=&quot;${d.color}&quot; stroke-width=&quot;4&quot;
+          stroke-linecap=&quot;round&quot; stroke-dasharray=&quot;${C.toFixed(1)}&quot; stroke-dashoffset=&quot;${off.toFixed(1)}&quot;/></svg>
+        <div class=&quot;pc-score-n&quot;>${d.score}</div>
       </div>
     </div>
-    <div class="pc-tags">${tagsH}</div>
-    <div class="pc-items">${kvsH}</div>
-    <div class="pc-notice" style="border-left-color:${d.color}">${updBadge}${noticeText}</div>
+    <div class=&quot;pc-tags&quot;>${tagsH}</div>
+    <div class=&quot;pc-items&quot;>${kvsH}</div>
+    <div class=&quot;pc-notice&quot; style=&quot;border-left-color:${d.color}&quot;>${updBadge}${noticeText}</div>
   </div>`;
 }
 
@@ -936,11 +1019,11 @@ function renderCards(data,gridId){
   const grid=document.getElementById(gridId);
   const q=ST.q.toLowerCase();
   const items=data.filter(d=>{
-    if(ST.r!=='all'&&d.r!==ST.r)return false;
-    if(q&&!JSON.stringify(d).toLowerCase().includes(q))return false;
+    if(ST.r!=='all'&amp;&amp;d.r!==ST.r)return false;
+    if(q&amp;&amp;!JSON.stringify(d).toLowerCase().includes(q))return false;
     return true;
   });
-  if(!items.length){grid.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:60px;color:#94a3b8;font-size:16px">未找到匹配的政策数据</div>';return;}
+  if(!items.length){grid.innerHTML='<div style=&quot;grid-column:1/-1;text-align:center;padding:60px;color:#94a3b8;font-size:16px&quot;>未找到匹配的政策数据</div>';return;}
   grid.innerHTML=items.map((d,i)=>cardHTML(d,i)).join('');
 }
 
@@ -949,26 +1032,26 @@ function renderCards(data,gridId){
 // ═══════════════════════════════════════════════════════════════
 function renderTariff(){
   const t=TARIFF;
-  const head=`<thead><tr>${t.cols.map((c,i)=>`<th${i===0?' style="min-width:185px"':''}>${c}</th>`).join('')}</tr></thead>`;
-  const body=`<tbody>${t.rows.map(r=>`<tr><td>${r.cat}</td>${r.cells.map(c=>`<td><div class="tc-sub">${c.sub}</div><span class="tc-r ${c.l}">${c.rate}</span><div class="tc-n">${c.note}</div></td>`).join('')}</tr>`).join('')}</tbody>`;
+  const head=`<thead><tr>${t.cols.map((c,i)=>`<th${i===0?' style=&quot;min-width:185px&quot;':''}>${c}</th>`).join('')}</tr></thead>`;
+  const body=`<tbody>${t.rows.map(r=>`<tr><td>${r.cat}</td>${r.cells.map(c=>`<td><div class=&quot;tc-sub&quot;>${c.sub}</div><span class=&quot;tc-r ${c.l}&quot;>${c.rate}</span><div class=&quot;tc-n&quot;>${c.note}</div></td>`).join('')}</tr>`).join('')}</tbody>`;
   document.getElementById('tft').innerHTML=head+body;
   document.getElementById('tft-note').innerHTML=t.note;
 
   const regions=[...new Set(GLOBAL_TARIFF.map(d=>d.region))];
   const rColors={'东亚':'#10b981','欧洲':'#0ea5e9','中东':'#f59e0b','亚太':'#8b5cf6','北美':'#ef4444','拉美':'#f97316','高壁垒':'#dc2626'};
-  const gHead=`<thead><tr><th style="min-width:50px">区域</th><th style="min-width:160px">国家/地区</th><th>对华电池Pack关税（HS 8507.60）</th><th>进口门槛评级</th><th>备注</th></tr></thead>`;
+  const gHead=`<thead><tr><th style=&quot;min-width:50px&quot;>区域</th><th style=&quot;min-width:160px&quot;>国家/地区</th><th>对华电池Pack关税（HS 8507.60）</th><th>进口门槛评级</th><th>备注</th></tr></thead>`;
   const gBody=`<tbody>${GLOBAL_TARIFF.map(d=>{
     const barW=d.rate==='0%'?4:d.rate.includes('82')?100:Math.min(100,Math.round(parseFloat(d.rate)*1.4));
     const barColor=d.level==='rh'?'#ef4444':d.level==='rm'?'#f59e0b':'#10b981';
     const lvlLabel=d.level==='rh'?'🔴 高壁垒':d.level==='rm'?'🟡 中等':'🟢 低壁垒';
     return `<tr>
-      <td><span style="display:inline-block;padding:2px 8px;border-radius:5px;font-size:11px;font-weight:600;background:${rColors[d.region]||'#64748b'}22;color:${rColors[d.region]||'#64748b'}">${d.region}</span></td>
-      <td><span style="font-size:18px;margin-right:8px">${d.flag}</span><strong style="font-size:14px">${d.country}</strong></td>
-      <td><span class="tc-r ${d.level}" style="font-size:14px">${d.rate}</span>
-        <div style="margin-top:6px;width:140px;height:5px;background:#f1f5f9;border-radius:3px;overflow:hidden">
-          <div style="height:100%;width:${barW}%;background:${barColor};border-radius:3px;transition:width .4s"></div></div></td>
-      <td><span style="font-size:13px">${lvlLabel}</span></td>
-      <td style="font-size:13px;color:#64748b;max-width:280px">${d.note}</td></tr>`;
+      <td><span style=&quot;display:inline-block;padding:2px 8px;border-radius:5px;font-size:11px;font-weight:600;background:${rColors[d.region]||'#64748b'}22;color:${rColors[d.region]||'#64748b'}&quot;>${d.region}</span></td>
+      <td><span style=&quot;font-size:18px;margin-right:8px&quot;>${d.flag}</span><strong style=&quot;font-size:14px&quot;>${d.country}</strong></td>
+      <td><span class=&quot;tc-r ${d.level}&quot; style=&quot;font-size:14px&quot;>${d.rate}</span>
+        <div style=&quot;margin-top:6px;width:140px;height:5px;background:#f1f5f9;border-radius:3px;overflow:hidden&quot;>
+          <div style=&quot;height:100%;width:${barW}%;background:${barColor};border-radius:3px;transition:width .4s&quot;></div></div></td>
+      <td><span style=&quot;font-size:13px&quot;>${lvlLabel}</span></td>
+      <td style=&quot;font-size:13px;color:#64748b;max-width:280px&quot;>${d.note}</td></tr>`;
   }).join('')}</tbody>`;
   document.getElementById('global-tft').innerHTML=gHead+gBody;
 }
@@ -984,15 +1067,15 @@ function renderEU(){
     const cnyNum=parseInt(d.cny.replace(/[^0-9]/g,''))||0;
     const pct=Math.min(100,Math.round(cnyNum/pctMax*100));
     return `<tr>
-      <td><div style="display:flex;align-items:center;gap:10px"><span style="font-size:22px">${d.flag}</span><strong style="font-size:15px">${d.country}</strong></div></td>
-      <td style="font-size:13px;color:#475569;max-width:200px">${d.policy}</td>
-      <td><div style="font-family:var(--ffm);font-size:15px;font-weight:600;color:#0f172a">${d.max}</div><div class="prog"><div class="prog-f" style="width:${pct}%"></div></div></td>
-      <td style="font-family:var(--ffm);font-size:14px;font-weight:600;color:#1677ff">${d.cny}</td>
-      <td><span style="display:inline-flex;padding:3px 9px;border-radius:5px;font-size:12px;font-weight:600;background:#ede9fe;color:#5b21b6">${d.type}</span></td>
-      <td style="font-size:13px;color:#475569;max-width:220px">${d.cond}</td>
-      <td style="font-size:13px;color:#475569">${d.period}</td>
-      <td style="font-size:13px">${d.cn}</td>
-      <td><span class="s-badge ${sc[d.status]}"><span class="sb-dot"></span>${sl[d.status]}</span></td>
+      <td><div style=&quot;display:flex;align-items:center;gap:10px&quot;><span style=&quot;font-size:22px&quot;>${d.flag}</span><strong style=&quot;font-size:15px&quot;>${d.country}</strong></div></td>
+      <td style=&quot;font-size:13px;color:#475569;max-width:200px&quot;>${d.policy}</td>
+      <td><div style=&quot;font-family:var(--ffm);font-size:15px;font-weight:600;color:#0f172a&quot;>${d.max}</div><div class=&quot;prog&quot;><div class=&quot;prog-f&quot; style=&quot;width:${pct}%&quot;></div></div></td>
+      <td style=&quot;font-family:var(--ffm);font-size:14px;font-weight:600;color:#1677ff&quot;>${d.cny}</td>
+      <td><span style=&quot;display:inline-flex;padding:3px 9px;border-radius:5px;font-size:12px;font-weight:600;background:#ede9fe;color:#5b21b6&quot;>${d.type}</span></td>
+      <td style=&quot;font-size:13px;color:#475569;max-width:220px&quot;>${d.cond}</td>
+      <td style=&quot;font-size:13px;color:#475569&quot;>${d.period}</td>
+      <td style=&quot;font-size:13px&quot;>${d.cn}</td>
+      <td><span class=&quot;s-badge ${sc[d.status]}&quot;><span class=&quot;sb-dot&quot;></span>${sl[d.status]}</span></td>
     </tr>`;
   }).join('');
 }
@@ -1003,14 +1086,14 @@ function renderEU(){
 function renderTimeline(){
   function mkList(arr, listId){
     document.getElementById(listId).innerHTML = arr.map((e, i) => `
-      <div class="tl-item" style="--td:${i * 70}ms">
-        <div class="tl-dot ${e.dot}"></div>
-        <div class="tl-date">${e.date}</div>
-        <div class="tl-title">
+      <div class=&quot;tl-item&quot; style=&quot;--td:${i * 70}ms&quot;>
+        <div class=&quot;tl-dot ${e.dot}&quot;></div>
+        <div class=&quot;tl-date&quot;>${e.date}</div>
+        <div class=&quot;tl-title&quot;>
           ${e.title}
-          <span class="tl-chip" style="background:${e.cB};color:${e.cC}">${e.chip}</span>
+          <span class=&quot;tl-chip&quot; style=&quot;background:${e.cB};color:${e.cC}&quot;>${e.chip}</span>
         </div>
-        <div class="tl-body ${e.body}">${e.text}</div>
+        <div class=&quot;tl-body ${e.body}&quot;>${e.text}</div>
       </div>`).join('');
   }
   mkList(TL_BAD, 'tl-bad-list');
@@ -1021,7 +1104,7 @@ function renderTimeline(){
 //  CHARTS
 // ═══════════════════════════════════════════════════════════════
 let charts={};
-function destroyCharts(){Object.values(charts).forEach(c=>c&&c.destroy&&c.destroy());charts={};}
+function destroyCharts(){Object.values(charts).forEach(c=>c&amp;&amp;c.destroy&amp;&amp;c.destroy());charts={};}
 
 function renderCharts(){
   destroyCharts();
@@ -1082,7 +1165,7 @@ function renderCharts(){
   });
 
   renderCmpTable();
-  document.getElementById('sel-r').innerHTML=METRICS.map(m=>`<button class="sel-b ${ST.sel.has(m.id)?'on':''}" onclick="toggleSel('${m.id}')">${m.lbl}</button>`).join('');
+  document.getElementById('sel-r').innerHTML=METRICS.map(m=>`<button class=&quot;sel-b ${ST.sel.has(m.id)?'on':''}&quot; onclick=&quot;toggleSel('${m.id}')&quot;>${m.lbl}</button>`).join('');
 }
 
 function renderCmpTable(){
@@ -1091,12 +1174,12 @@ function renderCmpTable(){
   const CLR={'CN':'#ef4444','EU':'#0ea5e9','US':'#8b5cf6','JP':'#f59e0b','KR':'#10b981'};
   const sel=METRICS.filter(m=>ST.sel.has(m.id));
   const t=document.getElementById('cmp-t');
-  if(!sel.length){t.innerHTML='<tbody><tr><td colspan="6" style="text-align:center;padding:36px;color:#94a3b8;font-size:15px">请至少选择一个维度</td></tr></tbody>';return;}
+  if(!sel.length){t.innerHTML='<tbody><tr><td colspan=&quot;6&quot; style=&quot;text-align:center;padding:36px;color:#94a3b8;font-size:15px&quot;>请至少选择一个维度</td></tr></tbody>';return;}
   const head=`<thead><tr><th>指标</th>${R.map(r=>`<th>${N[r]}</th>`).join('')}</tr></thead>`;
   const body=`<tbody>${sel.map(m=>{
     const vals=R.map(r=>m.vals[r]);const mx=Math.max(...vals)||1;
-    return `<tr><td>${m.lbl}<span style="color:#94a3b8;margin-left:6px;font-family:var(--ffm);font-size:11px">${m.unit}</span></td>
-    ${R.map(r=>{const v=m.vals[r];const p=Math.round(v/mx*100);return `<td><div class="bar-c"><div class="bar-m"><div class="bar-f" style="width:${p}%;background:${CLR[r]}"></div></div><span class="bar-n">${v}</span></div></td>`;}).join('')}</tr>`;
+    return `<tr><td>${m.lbl}<span style=&quot;color:#94a3b8;margin-left:6px;font-family:var(--ffm);font-size:11px&quot;>${m.unit}</span></td>
+    ${R.map(r=>{const v=m.vals[r];const p=Math.round(v/mx*100);return `<td><div class=&quot;bar-c&quot;><div class=&quot;bar-m&quot;><div class=&quot;bar-f&quot; style=&quot;width:${p}%;background:${CLR[r]}&quot;></div></div><span class=&quot;bar-n&quot;>${v}</span></div></td>`;}).join('')}</tr>`;
   }).join('')}</tbody>`;
   t.innerHTML=head+body;
 }
@@ -1238,18 +1321,18 @@ render();
 
   function buildItem(d){
     if(d.cls==='sep'){
-      return `<div style="display:inline-flex;align-items:center;padding:0 24px;height:100%;flex-shrink:0;border-right:1px solid rgba(255,255,255,.15);gap:8px">
-        <span style="width:1px;height:22px;background:rgba(255,255,255,.15)"></span>
-        <span style="font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:700;letter-spacing:.1em;color:#60a5fa;white-space:nowrap;background:rgba(59,130,246,.12);border:1px solid rgba(59,130,246,.25);border-radius:5px;padding:2px 9px">${d.badge}</span>
-        <span style="width:1px;height:22px;background:rgba(255,255,255,.15)"></span>
+      return `<div style=&quot;display:inline-flex;align-items:center;padding:0 24px;height:100%;flex-shrink:0;border-right:1px solid rgba(255,255,255,.15);gap:8px&quot;>
+        <span style=&quot;width:1px;height:22px;background:rgba(255,255,255,.15)&quot;></span>
+        <span style=&quot;font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:700;letter-spacing:.1em;color:#60a5fa;white-space:nowrap;background:rgba(59,130,246,.12);border:1px solid rgba(59,130,246,.25);border-radius:5px;padding:2px 9px&quot;>${d.badge}</span>
+        <span style=&quot;width:1px;height:22px;background:rgba(255,255,255,.15)&quot;></span>
       </div>`;
     }
-    return `<div class="ti">
-      <span class="ti-flag">${d.flag}</span>
-      <span class="ti-country">${d.country}</span>
-      <span class="ti-key">${d.key}</span>
-      <span class="ti-val ${colorMap[d.cls]||'tv-neu'}">${d.val}</span>
-      <span class="ti-badge ${badgeMap[d.bt]||'tb-warn'}">${d.badge}</span>
+    return `<div class=&quot;ti&quot;>
+      <span class=&quot;ti-flag&quot;>${d.flag}</span>
+      <span class=&quot;ti-country&quot;>${d.country}</span>
+      <span class=&quot;ti-key&quot;>${d.key}</span>
+      <span class=&quot;ti-val ${colorMap[d.cls]||'tv-neu'}&quot;>${d.val}</span>
+      <span class=&quot;ti-badge ${badgeMap[d.bt]||'tb-warn'}&quot;>${d.badge}</span>
     </div>`;
   }
 
@@ -1263,7 +1346,7 @@ render();
     document.body.appendChild(ruler);
     const pxPerCm = ruler.offsetWidth || 38;
     document.body.removeChild(ruler);
-    const speed = pxPerCm * 20;
+    const speed = pxPerCm * 7.5;
     const totalW = track.scrollWidth / 2;
     const dur = totalW / speed;
     track.style.animation = `tickScroll ${dur}s linear infinite`;
@@ -1285,6 +1368,1178 @@ render();
   track.addEventListener('mouseenter', ()=>{ if(!paused) track.style.animationPlayState='paused'; });
   track.addEventListener('mouseleave', ()=>{ if(!paused) track.style.animationPlayState='running'; });
 })();
+</script>
+</body>
+</html>
+"
+></iframe>
+
+<iframe id="frame-cert" class="page-frame"
+  srcdoc="<!DOCTYPE html>
+<html lang=&quot;zh-CN&quot;>
+<head>
+<meta charset=&quot;UTF-8&quot;/>
+<meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;/>
+<title>海外乘用车电池认证速查台 · 宁德时代海外乘用车事业部</title>
+<link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;/>
+<link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap&quot;/>
+<style>
+:root{
+  --bg:#f0f2f5;--surface:#fff;--surface2:#f8fafc;--border:#e4e8ef;--border2:#d1d9e6;
+  --text:#0d1b2a;--text2:#3d5166;--text3:#7a8fa6;
+  --accent:#005bac;--accent2:#0072d4;--accent-l:#e6f0fb;
+  --red:#c8302a;--red-l:#fdf0f0;
+  --grn:#1a7a4a;--grn-l:#eaf6f0;
+  --amb:#b56200;--amb-l:#fff8ed;
+  --hl:#fff3b0;  /* search highlight */
+  --ff:'Inter',system-ui,sans-serif;
+  --ffd:'Space Grotesk',sans-serif;
+  --ffm:'JetBrains Mono',monospace;
+  --sh:0 1px 3px rgba(0,0,0,.05),0 4px 14px rgba(0,0,0,.04);
+  --sh-hover:0 6px 24px rgba(0,0,0,.10);
+  --r:10px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--ff);background:var(--bg);color:var(--text);font-size:14px;line-height:1.6;-webkit-font-smoothing:antialiased}
+
+/* ── HEADER ── */
+.hd{background:linear-gradient(135deg,#00336b 0%,#005bac 55%,#003d8f 100%);padding:0;position:relative;overflow:hidden}
+.hd-deco{position:absolute;inset:0;pointer-events:none}
+.hd-deco::before{content:'';position:absolute;right:-80px;top:-80px;width:380px;height:380px;border-radius:50%;background:rgba(255,255,255,.05)}
+.hd-deco::after{content:'';position:absolute;left:42%;bottom:-100px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.03)}
+.hd-inner{max-width:1460px;margin:0 auto;padding:40px 52px 44px;position:relative;z-index:2;display:flex;align-items:flex-end;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.hd-label{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.9);font-family:var(--ffm);font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:4px 13px;border-radius:20px;margin-bottom:14px}
+.hd-label::before{content:'';width:6px;height:6px;border-radius:50%;background:#4ade80;animation:hdblink 2s infinite}
+@keyframes hdblink{0%,100%{opacity:1}50%{opacity:.4}}
+h1{font-family:var(--ffd);font-size:clamp(24px,2.8vw,38px);font-weight:700;color:#fff;line-height:1.15;letter-spacing:-.02em;margin-bottom:10px}
+h1 em{color:#7ec8ff;font-style:normal}
+.hd-sub{color:rgba(255,255,255,.62);font-size:14px;max-width:540px;line-height:1.7}
+.hd-stats{display:flex;gap:28px;flex-wrap:wrap;margin-top:26px}
+.hs{border-left:2px solid rgba(255,255,255,.2);padding-left:14px}
+.hs-n{font-family:var(--ffd);font-size:24px;font-weight:700;color:#fff;line-height:1}
+.hs-l{font-size:11px;color:rgba(255,255,255,.45);margin-top:3px;font-family:var(--ffm);letter-spacing:.06em;text-transform:uppercase}
+.hd-right{flex-shrink:0;display:flex;flex-direction:column;align-items:flex-end;gap:9px}
+.hd-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 15px;border-radius:8px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:rgba(255,255,255,.8);font-size:13px;font-weight:500;cursor:pointer;transition:all .18s}
+.hd-btn:hover{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.35)}
+.hd-btn svg{width:14px;height:14px}
+.hd-note{font-size:11px;color:rgba(255,255,255,.38);text-align:right}
+
+/* ── SEARCH HERO ── */
+.search-hero{background:var(--accent);padding:0}
+.sh-inner{max-width:1460px;margin:0 auto;padding:18px 52px;display:flex;align-items:center;gap:14px}
+.sh-wrap{flex:1;position:relative;max-width:680px}
+.sh-wrap svg{position:absolute;left:15px;top:50%;transform:translateY(-50%);width:18px;height:18px;color:rgba(255,255,255,.6)}
+.sh-input{width:100%;padding:13px 16px 13px 44px;background:rgba(255,255,255,.15);border:1.5px solid rgba(255,255,255,.25);border-radius:10px;font-family:var(--ff);font-size:15px;color:#fff;outline:none;transition:all .18s}
+.sh-input:focus{background:rgba(255,255,255,.2);border-color:rgba(255,255,255,.5)}
+.sh-input::placeholder{color:rgba(255,255,255,.5)}
+.sh-hint{font-size:13px;color:rgba(255,255,255,.6);white-space:nowrap}
+.sh-clear{background:rgba(255,255,255,.15);border:none;border-radius:7px;padding:7px 14px;color:rgba(255,255,255,.8);font-size:13px;cursor:pointer;transition:all .15s;white-space:nowrap}
+.sh-clear:hover{background:rgba(255,255,255,.25)}
+
+/* ── SEARCH RESULTS PANEL ── */
+.sr-panel{display:none;background:var(--surface);border-bottom:2px solid var(--accent2);box-shadow:0 4px 24px rgba(0,0,0,.1)}
+.sr-panel.on{display:block}
+.sr-inner{max-width:1460px;margin:0 auto;padding:20px 52px 24px}
+.sr-header{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.sr-title{font-family:var(--ffd);font-size:16px;font-weight:700;color:var(--text)}
+.sr-count{font-family:var(--ffm);font-size:12px;color:#fff;background:var(--accent2);border-radius:20px;padding:2px 10px}
+.sr-results{display:flex;flex-direction:column;gap:8px}
+.sr-item{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:12px 16px;cursor:pointer;transition:all .15s;display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center}
+.sr-item:hover{border-color:var(--accent2);background:var(--accent-l)}
+.sr-item-flag{font-size:20px;flex-shrink:0}
+.sr-item-std{font-family:var(--ffd);font-size:13px;font-weight:700;color:var(--text);margin-bottom:3px}
+.sr-item-clause{font-family:var(--ffm);font-size:11px;color:var(--accent2);background:var(--accent-l);padding:1px 7px;border-radius:3px;display:inline-block;margin-bottom:4px}
+.sr-item-text{font-size:13px;color:var(--text2);line-height:1.55}
+.sr-item-mkt{font-family:var(--ffm);font-size:11px;color:var(--text3);background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:2px 7px;white-space:nowrap}
+mark.hl{background:var(--hl);color:#7a5700;border-radius:2px;padding:0 1px}
+.sr-empty{text-align:center;padding:28px;color:var(--text3);font-size:14px}
+.sr-show-all{text-align:center;margin-top:12px}
+.sr-show-all button{background:none;border:1px solid var(--border);border-radius:7px;padding:7px 18px;font-size:13px;color:var(--accent2);cursor:pointer;transition:all .15s}
+.sr-show-all button:hover{background:var(--accent-l);border-color:var(--accent2)}
+
+/* ── MAIN ── */
+.main{max-width:1460px;margin:0 auto;padding:28px 52px 80px}
+
+/* ── FILTER BAR ── */
+.filter-bar{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:14px 20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:22px;box-shadow:var(--sh);position:sticky;top:0;z-index:100}
+.filter-group{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.filter-label{font-size:11px;font-weight:600;color:var(--text3);letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;font-family:var(--ffm)}
+.fb{padding:5px 13px;border-radius:20px;border:1px solid var(--border);background:var(--surface2);color:var(--text2);font-size:12px;font-weight:500;cursor:pointer;transition:all .14s;white-space:nowrap;display:inline-flex;align-items:center;gap:4px}
+.fb:hover{border-color:var(--accent2);color:var(--accent2)}
+.fb.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.filter-div{width:1px;height:20px;background:var(--border);flex-shrink:0}
+.top-bar{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:10px}
+.section-title{font-family:var(--ffd);font-size:16px;font-weight:700;color:var(--text)}
+.section-count{font-family:var(--ffm);font-size:12px;color:var(--text3);background:var(--surface2);border:1px solid var(--border);border-radius:20px;padding:2px 9px}
+.view-bar{display:flex;gap:3px;background:#f1f4f8;border-radius:8px;padding:3px}
+.vb{padding:6px 15px;border-radius:6px;border:none;background:transparent;color:var(--text3);font-family:var(--ff);font-size:13px;font-weight:500;cursor:pointer;transition:all .14s;white-space:nowrap}
+.vb:hover{color:var(--text)}
+.vb.on{background:#fff;color:var(--text);box-shadow:0 1px 4px rgba(0,0,0,.1)}
+
+/* ── VIEWS ── */
+.view{display:none}.view.on{display:block}
+
+/* ── CERT GRID ── */
+.cert-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(370px,1fr));gap:18px}
+@keyframes cardIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.cc{background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:var(--sh);transition:box-shadow .2s,transform .2s,border-color .2s;opacity:0;animation:cardIn .3s ease forwards;animation-delay:var(--cd,0ms)}
+.cc.search-match{border-color:var(--accent2);box-shadow:0 0 0 2px rgba(0,114,212,.15),var(--sh)}
+.cc:hover{box-shadow:var(--sh-hover);transform:translateY(-2px);border-color:var(--border2)}
+.cc-top{height:3px}
+.cc-head{padding:15px 20px 11px;display:flex;align-items:flex-start;gap:12px;border-bottom:1px solid #f3f6fa}
+.cc-flag-wrap{display:flex;flex-direction:column;align-items:center;gap:3px;flex-shrink:0}
+.cc-flag{font-size:26px;line-height:1}
+.cc-mkt-tag{font-family:var(--ffm);font-size:9px;font-weight:600;color:var(--text3);letter-spacing:.05em;text-transform:uppercase}
+.cc-info{flex:1;min-width:0}
+.cc-std{font-family:var(--ffd);font-size:15px;font-weight:700;color:var(--text);line-height:1.2;margin-bottom:3px}
+.cc-full{font-size:12px;color:var(--text3);line-height:1.4;margin-bottom:6px}
+.cc-badges{display:flex;gap:5px;flex-wrap:wrap}
+.badge{display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;white-space:nowrap}
+.b-must{background:#fee0de;color:#b91c1c}
+.b-vol{background:#dbeafe;color:#1d4ed8}
+.b-new{background:#fef9c3;color:#92400e}
+.b-plan{background:#f3e8ff;color:#6b21a8}
+.b-hot{background:#fce7f3;color:#9d174d}
+
+/* ── CLAUSE SECTIONS ── */
+.cc-section{padding:10px 20px;border-bottom:1px solid #f5f7fa}
+.cc-section:last-of-type{border-bottom:none}
+.cc-section-hd{display:flex;align-items:center;gap:7px;margin-bottom:8px;cursor:pointer;user-select:none}
+.cc-section-hd:hover .cc-section-title{color:var(--accent2)}
+.cc-section-icon{width:18px;height:18px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:10px;flex-shrink:0}
+.cc-section-title{font-size:12px;font-weight:600;color:var(--text2);letter-spacing:.03em}
+.cc-section-badge{font-family:var(--ffm);font-size:10px;padding:1px 6px;border-radius:3px;margin-left:auto}
+.cc-section-toggle{font-size:10px;color:var(--text3);margin-left:4px;transition:transform .2s}
+.cc-section.collapsed .cc-section-toggle{transform:rotate(-90deg)}
+.cc-section.collapsed .clause-list{display:none}
+.clause-list{display:flex;flex-direction:column;gap:5px}
+.clause-item{background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:8px 11px;transition:background .15s}
+.clause-item.match-hl{background:#fffbeb;border-color:#fbbf24}
+.clause-no{font-family:var(--ffm);font-size:10px;color:var(--accent2);margin-bottom:3px;font-weight:500}
+.clause-key{font-size:11px;font-weight:600;color:var(--text2);margin-bottom:2px}
+.clause-val{font-size:12.5px;color:var(--text2);line-height:1.55}
+.clause-val.warn{color:var(--amb)}
+.clause-val.red{color:var(--red)}
+.clause-val.grn{color:var(--grn)}
+.clause-note{font-size:11.5px;color:var(--text3);margin-top:3px;font-style:italic}
+.cc-notice{margin:10px 20px 14px;padding:9px 12px;border-radius:7px;font-size:12.5px;color:var(--text2);line-height:1.65;border-left:3px solid;background:var(--surface2)}
+.cc-notice-lbl{font-family:var(--ffm);font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+.cc-labs{margin:0 20px 14px;display:flex;flex-wrap:wrap;gap:5px;align-items:center}
+.cc-labs-lbl{font-size:11px;color:var(--text3);font-family:var(--ffm);margin-right:2px}
+.lab{font-size:11px;font-weight:500;padding:2px 8px;border-radius:4px;background:#f1f5f9;color:var(--text2);border:1px solid var(--border)}
+.cc-tags{padding:8px 20px 6px;display:flex;flex-wrap:wrap;gap:5px}
+.ct{padding:3px 9px;border-radius:12px;font-size:11px;font-weight:500;border:1px solid transparent}
+.ct-safety{background:#fff0f0;color:#991b1b;border-color:#fecaca}
+.ct-chem{background:#eff6ff;color:#1e40af;border-color:#bfdbfe}
+.ct-env{background:#f0fdf4;color:#166534;border-color:#bbf7d0}
+.ct-chain{background:#fefce8;color:#854d0e;border-color:#fde68a}
+.ct-recycle{background:#f5f3ff;color:#4c1d95;border-color:#ddd6fe}
+
+/* ── MATRIX ── */
+.matrix-wrap{overflow-x:auto;border-radius:var(--r);border:1px solid var(--border);box-shadow:var(--sh)}
+table.matrix{width:100%;border-collapse:collapse;font-size:13px;min-width:900px}
+.matrix thead{background:var(--surface2);position:sticky;top:50px}
+.matrix th{padding:12px 14px;text-align:center;font-family:var(--ffd);font-size:12px;font-weight:600;color:var(--text2);border-bottom:1px solid var(--border);white-space:nowrap}
+.matrix th:first-child{text-align:left;min-width:200px;border-right:1px solid var(--border)}
+.matrix td{padding:11px 14px;border-bottom:1px solid #f3f6fa;text-align:center;vertical-align:middle}
+.matrix tr:last-child td{border-bottom:none}
+.matrix tr:hover td{background:#fafbfc}
+.matrix td:first-child{text-align:left;border-right:1px solid #f3f6fa;background:var(--surface2)}
+.mx-std{font-weight:600;font-size:13px;color:var(--text)}
+.mx-cat{font-size:11px;color:var(--text3);margin-top:2px}
+.mx-dot{width:28px;height:28px;border-radius:7px;display:inline-flex;align-items:center;justify-content:center;font-size:13px;font-weight:700}
+.mx-must{background:#fee2e2;color:#b91c1c}
+.mx-vol{background:#dbeafe;color:#1d4ed8}
+.mx-plan{background:#fef9c3;color:#854d0e}
+.mx-na{background:#f1f5f9;color:#94a3b8}
+.mx-lbl{font-family:var(--ffm);font-size:9px;color:var(--text3);letter-spacing:.04em;margin-top:2px}
+
+/* ── TIMELINE ── */
+.tl-wrap{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px}
+@keyframes tlIn{from{opacity:0;transform:translateX(-6px)}to{opacity:1;transform:none}}
+.tl-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px 20px;box-shadow:var(--sh);position:relative;overflow:hidden;opacity:0;animation:tlIn .3s ease forwards;animation-delay:var(--td,0ms)}
+.tl-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--tc,var(--accent))}
+.tl-year{font-family:var(--ffm);font-size:11px;color:var(--text3);letter-spacing:.07em;text-transform:uppercase;margin-bottom:7px;display:flex;align-items:center;gap:6px}
+.tl-dot-s{width:7px;height:7px;border-radius:50%;background:var(--tc,var(--accent));flex-shrink:0}
+.tl-ttl{font-family:var(--ffd);font-size:15px;font-weight:700;color:var(--text);margin-bottom:6px;line-height:1.35}
+.tl-body{font-size:13px;color:var(--text2);line-height:1.65}
+.tl-impact{margin-top:10px;padding:8px 10px;border-radius:6px;font-size:12px;line-height:1.55;border-left:3px solid}
+.impact-high{border-left-color:#b91c1c;background:#fdf0f0;color:#7f1d1d}
+.impact-mid{border-left-color:#b56200;background:#fff8ed;color:#78350f}
+.impact-low{border-left-color:#1a7a4a;background:#eaf6f0;color:#14532d}
+.tl-mkt{display:flex;gap:4px;flex-wrap:wrap;margin-top:10px}
+.tl-mkt-t{font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px;background:var(--surface2);color:var(--text3);border:1px solid var(--border);font-family:var(--ffm)}
+
+/* ── MISC ── */
+::-webkit-scrollbar{width:5px;height:5px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:3px}
+footer{background:#0d1b2a;padding:18px 52px;text-align:center;font-size:12px;color:#3d5166}
+footer em{color:#4d8dc9;font-style:normal}
+@media(max-width:1100px){.main,.hd-inner,.sh-inner,.sr-inner{padding-left:24px;padding-right:24px}}
+@media(max-width:750px){.main,.hd-inner,.sh-inner,.sr-inner{padding-left:14px;padding-right:14px}.cert-grid{grid-template-columns:1fr}}
+@media print{.search-hero,.filter-bar,.view-bar,.sr-panel{display:none!important}.cc{break-inside:avoid}}
+</style>
+</head>
+<body>
+
+<!-- ══ HEADER ══ -->
+<div class=&quot;hd&quot;>
+  <div class=&quot;hd-deco&quot;></div>
+  <div class=&quot;hd-inner&quot;>
+    <div>
+      <div class=&quot;hd-label&quot;>CATL Overseas Passenger EV · Certification Intelligence</div>
+      <h1>海外乘用车电池<br><em>认证要求速查台</em></h1>
+      <p class=&quot;hd-sub&quot;>覆盖欧洲、北美、日本、韩国、印度、东南亚7大市场，条款级精确检索，数据截至2026年3月</p>
+      <div class=&quot;hd-stats&quot;>
+        <div class=&quot;hs&quot;><div class=&quot;hs-n&quot;>7</div><div class=&quot;hs-l&quot;>市场</div></div>
+        <div class=&quot;hs&quot;><div class=&quot;hs-n&quot;>18</div><div class=&quot;hs-l&quot;>认证标准</div></div>
+        <div class=&quot;hs&quot;><div class=&quot;hs-n&quot;>120+</div><div class=&quot;hs-l&quot;>具体条款</div></div>
+        <div class=&quot;hs&quot;><div class=&quot;hs-n&quot; style=&quot;color:#f87171&quot;>6项</div><div class=&quot;hs-l&quot;>即将变更</div></div>
+      </div>
+    </div>
+    <div class=&quot;hd-right&quot;>
+      <button class=&quot;hd-btn&quot; onclick=&quot;window.print()&quot;>
+        <svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot;><polyline points=&quot;6 9 6 2 18 2 18 9&quot;/><path d=&quot;M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2&quot;/><rect x=&quot;6&quot; y=&quot;14&quot; width=&quot;12&quot; height=&quot;8&quot;/></svg>
+        打印 / PDF
+      </button>
+      <div class=&quot;hd-note&quot;>内部参考资料 · 以各国官方最新法规为准</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ SEARCH HERO ══ -->
+<div class=&quot;search-hero&quot;>
+  <div class=&quot;sh-inner&quot;>
+    <div class=&quot;sh-wrap&quot;>
+      <svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.5&quot;><circle cx=&quot;11&quot; cy=&quot;11&quot; r=&quot;8&quot;/><path d=&quot;m21 21-4.35-4.35&quot;/></svg>
+      <input class=&quot;sh-input&quot; id=&quot;main-srch&quot; type=&quot;text&quot; placeholder=&quot;搜索认证标准、条款号、测试参数、关键词… 例：热失控、UN R100、80%、过充&quot;/>
+    </div>
+    <div class=&quot;sh-hint&quot; id=&quot;sh-hint&quot;>输入关键词，直接定位到相关条款</div>
+    <button class=&quot;sh-clear&quot; id=&quot;sh-clear&quot; style=&quot;display:none&quot; onclick=&quot;clearSearch()&quot;>✕ 清除</button>
+  </div>
+</div>
+
+<!-- ══ SEARCH RESULTS PANEL ══ -->
+<div class=&quot;sr-panel&quot; id=&quot;sr-panel&quot;>
+  <div class=&quot;sr-inner&quot;>
+    <div class=&quot;sr-header&quot;>
+      <div class=&quot;sr-title&quot;>条款搜索结果</div>
+      <span class=&quot;sr-count&quot; id=&quot;sr-count&quot;>0</span>
+    </div>
+    <div class=&quot;sr-results&quot; id=&quot;sr-results&quot;></div>
+    <div class=&quot;sr-show-all&quot; id=&quot;sr-show-all&quot; style=&quot;display:none&quot;>
+      <button onclick=&quot;showAllResults()&quot;>显示全部结果</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ MAIN ══ -->
+<div class=&quot;main&quot;>
+
+<!-- ── FILTER BAR ── -->
+<div class=&quot;filter-bar&quot;>
+  <div class=&quot;filter-group&quot;>
+    <span class=&quot;filter-label&quot;>市场</span>
+    <button class=&quot;fb on&quot; data-mkt=&quot;all&quot;>全部</button>
+    <button class=&quot;fb&quot; data-mkt=&quot;EU&quot;>🇪🇺 欧盟</button>
+    <button class=&quot;fb&quot; data-mkt=&quot;UK&quot;>🇬🇧 英国</button>
+    <button class=&quot;fb&quot; data-mkt=&quot;US&quot;>🇺🇸 北美</button>
+    <button class=&quot;fb&quot; data-mkt=&quot;JP&quot;>🇯🇵 日本</button>
+    <button class=&quot;fb&quot; data-mkt=&quot;KR&quot;>🇰🇷 韩国</button>
+    <button class=&quot;fb&quot; data-mkt=&quot;IN&quot;>🇮🇳 印度</button>
+    <button class=&quot;fb&quot; data-mkt=&quot;SEA&quot;>🌏 东南亚</button>
+  </div>
+  <div class=&quot;filter-div&quot;></div>
+  <div class=&quot;filter-group&quot;>
+    <span class=&quot;filter-label&quot;>类别</span>
+    <button class=&quot;fb on&quot; data-cat=&quot;all&quot;>全部</button>
+    <button class=&quot;fb&quot; data-cat=&quot;safety&quot;>产品安全</button>
+    <button class=&quot;fb&quot; data-cat=&quot;chem&quot;>电化学性能</button>
+    <button class=&quot;fb&quot; data-cat=&quot;env&quot;>环境适应性</button>
+    <button class=&quot;fb&quot; data-cat=&quot;chain&quot;>供应链合规</button>
+    <button class=&quot;fb&quot; data-cat=&quot;recycle&quot;>回收再生</button>
+  </div>
+</div>
+
+<div class=&quot;top-bar&quot;>
+  <div style=&quot;display:flex;align-items:center;gap:10px&quot;>
+    <span class=&quot;section-title&quot; id=&quot;view-title&quot;>认证卡片</span>
+    <span class=&quot;section-count&quot; id=&quot;view-count&quot;>—</span>
+  </div>
+  <div class=&quot;view-bar&quot;>
+    <button class=&quot;vb on&quot; data-view=&quot;cards&quot;>卡片视图</button>
+    <button class=&quot;vb&quot; data-view=&quot;matrix&quot;>合规矩阵</button>
+    <button class=&quot;vb&quot; data-view=&quot;timeline&quot;>变更时间轴</button>
+  </div>
+</div>
+
+<div id=&quot;v-cards&quot; class=&quot;view on&quot;><div class=&quot;cert-grid&quot; id=&quot;cert-grid&quot;></div></div>
+<div id=&quot;v-matrix&quot; class=&quot;view&quot;>
+  <div class=&quot;matrix-wrap&quot;><table class=&quot;matrix&quot; id=&quot;matrix-table&quot;></table></div>
+  <div style=&quot;margin-top:12px;display:flex;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--text2)&quot;>
+    <span style=&quot;display:flex;align-items:center;gap:5px&quot;><span class=&quot;mx-dot mx-must&quot; style=&quot;width:20px;height:20px;font-size:11px&quot;>●</span>强制</span>
+    <span style=&quot;display:flex;align-items:center;gap:5px&quot;><span class=&quot;mx-dot mx-vol&quot; style=&quot;width:20px;height:20px;font-size:11px&quot;>○</span>自愿/OEM要求</span>
+    <span style=&quot;display:flex;align-items:center;gap:5px&quot;><span class=&quot;mx-dot mx-plan&quot; style=&quot;width:20px;height:20px;font-size:11px&quot;>△</span>过渡/即将强制</span>
+    <span style=&quot;display:flex;align-items:center;gap:5px&quot;><span class=&quot;mx-dot mx-na&quot; style=&quot;width:20px;height:20px;font-size:11px&quot;>—</span>不适用</span>
+  </div>
+</div>
+<div id=&quot;v-timeline&quot; class=&quot;view&quot;><div class=&quot;tl-wrap&quot; id=&quot;tl-grid&quot;></div></div>
+
+</div>
+
+<footer><p>数据来源：UN/ECE、NHTSA、欧盟委员会、日本国交省/经产省、韩国KATS、印度MHI/ARAI · 内部使用仅供参考 · <em>2026年3月</em> · 宁德时代海外乘用车事业部</p></footer>
+
+<script>
+// ═══════════════════════════════════════════════════
+//  MASTER DATA  ── 条款级结构
+//  每条 clause: { no, key, val, note?, severity? }
+//  severity: 'warn' | 'red' | 'grn' | '' (default)
+// ═══════════════════════════════════════════════════
+const CERTS = [
+
+// ──────────── 欧盟 ────────────
+{
+  id:'unr100', mkt:'EU', flag:'🇪🇺', mktName:'欧盟/EEA',
+  std:'UN R100 Rev.3', full:'联合国电动汽车蓄电池安全规范（E/ECE/324/Rev.2/Add.99/Rev.3）',
+  status:'must', form:['cyl','pris','pouch'], cats:['safety'],
+  color:'#0ea5e9',
+  badges:[{t:'强制认证',c:'b-must'},{t:'新车型2023年9月',c:'b-new'},{t:'全车型2025年9月',c:'b-hot'}],
+  tags:[{t:'产品安全',c:'ct-safety'}],
+  sections:[
+    {
+      title:'适用范围与定义（§1–§2）',icon:'📋',iconBg:'#eff6ff',color:'#1d4ed8',
+      clauses:[
+        {no:'§1',key:'适用车辆',val:'M类（乘用车）和N类（商用车）电动汽车；Part II专门规定REESS安全要求；不覆盖碰撞后安全（Post-Crash Safety）'},
+        {no:'§2.15',key:'热失控（Thermal Runaway）',val:'电池单体内部放热反应失控、温度自加速升高的不可逆过程，可能引发电解液喷出、起火或爆炸'},
+        {no:'§2.21',key:'热扩散传播（Thermal Propagation）',val:'一个单体热失控后依次触发相邻单体热失控的连锁过程'},
+        {no:'§2.26',key:'被测对象（Tested-Device）',val:'可为完整REESS，或制造商论证具有安全代表性的REESS子系统'},
+        {no:'§1',key:'Rev.3独立认证路径',val:'REESS制造商可申请独立的REESS型式批准，认证结果可供多个整车厂引用，无需附属于整车型式认证'},
+      ]
+    },
+    {
+      title:'Annex 9A — 振动测试',icon:'📳',iconBg:'#eff6ff',color:'#1d4ed8',
+      clauses:[
+        {no:'Annex 9A §4',key:'振动波形',val:'正弦波，7 Hz → 50 Hz → 7 Hz对数扫频；每次扫频15分钟；重复12次，合计3小时；方向为制造商规定的REESS安装垂直方向；测试温度22±5°C'},
+        {no:'Annex 9A §4',key:'加速度-频率关系（原文表格）',val:'7~18 Hz：10 g；18~30 Hz：从10 g线性递减至2 g；30~50 Hz：2 g'},
+        {no:'Annex 9A §5',key:'合格判据',val:'振动后执行标准充放电循环，1小时观察期内：无漏液（>150 mL为不合格）、无破裂/起火/爆炸；高压绝缘电阻须符合§6.x要求'},
+        {no:'Annex 9A 安装',key:'安装方式',val:'被测对象须用原始安装点固定于振动台；若REESS存在原始安装点则须使用；须确保振动直接传递至被测对象'},
+      ]
+    },
+    {
+      title:'Annex 9B — 热冲击与温度循环',icon:'🌡',iconBg:'#fef9c3',color:'#92400e',
+      clauses:[
+        {no:'Annex 9B §4',key:'温度范围',val:'高温：+60±2°C（制造商可要求更高温度）储存≥6小时；低温：−40±2°C（制造商可要求更低温度）储存≥6小时'},
+        {no:'Annex 9B §4',key:'循环次数与转换时间',val:'两极端温度之间转换时间≤30分钟；至少完成5个完整循环；循环结束后在22±5°C储存24小时'},
+        {no:'Annex 9B §4',key:'循环后处理',val:'24小时存放后执行标准充放电循环（Appendix 1所定义），最后进行1小时观察'},
+        {no:'Annex 9B §5',key:'合格判据',val:'无漏液、无破裂、无起火、无爆炸；测试前后绝缘电阻无显著降低'},
+      ]
+    },
+    {
+      title:'Annex 9C — 机械冲击',icon:'💥',iconBg:'#fef2f2',color:'#b91c1c',
+      clauses:[
+        {no:'Annex 9C §4',key:'测试目的与参数',val:'验证REESS在车辆碰撞惯性载荷下的安全性；加速度脉冲参数及廊道依车辆类别由技术服务机构与制造商协商确定（原文附表）'},
+        {no:'Annex 9C §5',key:'合格判据',val:'1小时观察期内：无起火、无爆炸；高压绝缘电阻满足要求；无电解液泄漏至乘员舱'},
+      ]
+    },
+    {
+      title:'Annex 9D — 机械完整性（挤压）',icon:'🗜',iconBg:'#fef2f2',color:'#b91c1c',
+      clauses:[
+        {no:'Annex 9D §4.1',key:'挤压力参数（原文）',val:'挤压力≥100 kN，≤105 kN（除非§6.4.2另有规定）；起始时间（onset time）<3分钟；保持时间（hold time）100 ms~10 s'},
+        {no:'Annex 9D §4.1',key:'挤压方向',val:'水平施加，垂直于行驶方向；由制造商根据REESS在整车中的安装方位决定'},
+        {no:'Annex 9D §4.2',key:'更高参数可选',val:'制造商可申请更高挤压力、更长起始时间或更长保持时间'},
+        {no:'Annex 9D §5',key:'合格判据',val:'1小时观察期内：无起火、无爆炸（允许变形和漏液）；高压绝缘电阻满足要求'},
+      ]
+    },
+    {
+      title:'Annex 9E — 火烧测试',icon:'🔥',iconBg:'#fef2f2',color:'#b91c1c',
+      clauses:[
+        {no:'Annex 9E §4',key:'火焰来源',val:'商用燃料（汽油/甲醇）燃烧盘产生的直接火焰（direct exposure）和间接火焰（indirect exposure），模拟车辆外部燃料溢出着火场景'},
+        {no:'Annex 9E §4',key:'暴露时间',val:'直接火焰暴露60秒；间接火焰暴露70秒'},
+        {no:'Annex 9E §5',key:'合格判据',val:'测试后5分钟内无爆炸（允许起火；不对绝缘电阻作要求）'},
+      ]
+    },
+    {
+      title:'Annex 9F — 外部短路保护',icon:'⚡',iconBg:'#fef9c3',color:'#92400e',
+      clauses:[
+        {no:'Annex 9F §4',key:'短路条件（原文）',val:'满充状态；充放电所有主接触器闭合（模拟主动行驶模式）；正负极端子经≤5 mΩ阻抗（含连接电缆）短接'},
+        {no:'Annex 9F §4',key:'测试持续时间',val:'持续至REESS保护功能切断短路电流；或至Tested-Device壳体温度稳定后再持续≥1小时（稳定定义：温度梯度<4°C/2h）'},
+        {no:'Annex 9F §5',key:'合格判据',val:'无起火、无爆炸；高压绝缘电阻满足要求'},
+      ]
+    },
+    {
+      title:'Annex 9G — 过充保护',icon:'🔋',iconBg:'#fef9c3',color:'#92400e',
+      clauses:[
+        {no:'Annex 9G §4',key:'充电电流',val:'以制造商规定最大充电电流充电（通过外部电源）'},
+        {no:'Annex 9G §4',key:'终止条件（三选一）',val:'①车辆过充保护控制切断充电电流；②若保护失效，REESS温度超过制造商规定最高工作温度10°C时终止；③若温度未超过，外部充电开始后12小时终止'},
+        {no:'Annex 9G §5',key:'合格判据',val:'终止后立即执行1次标准充放电循环，再进行1小时观察期；无起火、无爆炸'},
+      ]
+    },
+    {
+      title:'Annex 9H — 过放保护',icon:'🔋',iconBg:'#fef9c3',color:'#92400e',
+      clauses:[
+        {no:'Annex 9H §4',key:'放电规程',val:'以制造商规定正常工作范围内的稳定电流持续放电；至REESS自动切断（保护动作），或（无保护）放至额定电压25%，或温度稳定（梯度<4°C/2h）'},
+        {no:'Annex 9H §5',key:'合格判据',val:'终止后执行标准充电+放电循环；1小时观察期内：无起火、无爆炸'},
+      ]
+    },
+    {
+      title:'Annex 9I — 过温保护',icon:'🌡',iconBg:'#fef9c3',color:'#92400e',
+      clauses:[
+        {no:'Annex 9I §4',key:'测试规程',val:'以最大工作范围内电流持续充放电，同时将腔体温度从20±10°C逐步升高：有保护→升至制造商规定保护触发温度；无保护→升至制造商规定最高工作温度'},
+        {no:'Annex 9I §4',key:'测试结束条件',val:'REESS抑制/限制充放电（保护启动）；或温度稳定（梯度<4°C/2h）；或发生起火/爆炸（不合格）'},
+        {no:'Annex 9I §5',key:'合格判据',val:'无起火、无爆炸'},
+      ]
+    },
+    {
+      title:'Annex 9J — 直流过流保护（Rev.3全新增加）',icon:'🆕',iconBg:'#fef3c7',color:'#92400e',
+      clauses:[
+        {no:'Annex 9J §1',key:'适用范围',val:'仅适用于可通过外部直流电源充电的车辆（DC快充）；为Rev.3相对Rev.2新增的第10项测试，Rev.2时代无此项',severity:'warn'},
+        {no:'Annex 9J §4',key:'过流水平确定',val:'将外部DC充电设备的充电控制通信修改或禁用，使设备无法限制充电电流；过流水平由制造商与技术服务机构协商确定'},
+        {no:'Annex 9J §4',key:'电流递增规程（原文）',val:'先以制造商规定最高正常充电电流充电；然后在5秒内将电流从最高正常值线性递增至协商确定的过流水平；维持直至保护动作'},
+        {no:'Annex 9J §5',key:'合格判据',val:'充电保护功能切断充电电流；1小时观察期内：无起火、无爆炸；绝缘电阻满足要求'},
+      ]
+    },
+    {
+      title:'§6.15 — 热扩散传播（Rev.3最核心安全条款）',icon:'🚨',iconBg:'#fef2f2',color:'#b91c1c',
+      clauses:[
+        {no:'§6.15.1',key:'基本安全要求（原文）',val:'REESS或车辆系统须发出信号，在乘员舱内因内部短路导致单体热失控进而引发热扩散传播而产生危险状态（起火/爆炸/烟雾）前至少5分钟激活警报，确保乘员有时间撤离',severity:'red'},
+        {no:'§6.15 豁免条件',key:'合格路径A（推荐）',val:'若热扩散传播不导致乘员舱危险状态，则视为满足§6.15要求，无需预警系统——路径A投入最低，热管理设计达标即可',severity:'warn'},
+        {no:'§6.15 合规路径B',key:'配备预警系统',val:'若热扩散可能导致乘员舱危险，则须装备满足要求的预警系统，确保危险发生前≥5分钟发出警报'},
+        {no:'热扩散触发方法',key:'默认与可选触发',val:'默认方法：局部快速外部加热（Localized Fast External Heating）；可选方法（须制造商推荐且经技术服务机构认可）：局部内部加热器、针刺、激光'},
+        {no:'热扩散测试SOC',key:'测试SOC要求',val:'热扩散测试时须按制造商规定的正常充电程序将被测对象充至最高SOC（Rev.3要求充至最高；Rev.2为50%，这是重大提升）',severity:'warn'},
+      ]
+    },
+    {
+      title:'过渡时间表与认证路径',icon:'📅',iconBg:'#f0fdf4',color:'#15803d',
+      clauses:[
+        {no:'过渡节点1',key:'2023年9月1日',val:'新车型型式认证须满足Rev.3要求，不再受理Rev.2新车型认证申请'},
+        {no:'过渡节点2',key:'2025年9月1日',val:'所有型式认证（含现有车型延续认证）须满足Rev.3；Rev.2认证证书不再有效，须重新认证',severity:'warn'},
+        {no:'子系统测试',key:'灵活性规定',val:'制造商可在REESS子系统层面进行各Annex测试，但须向技术服务机构论证子系统结果可充分代表完整REESS安全性能'},
+        {no:'认可机构示例',key:'EU Notified Body',val:'TÜV Rheinland（e4，德），TÜV SÜD（e4，德），IDIADA（e9，西班牙），UTAC（e2，法），Bureau Veritas（e2，法），SGS（e14，瑞士）'},
+      ]
+    }
+  ],
+  labs:['TÜV Rheinland','TÜV SÜD','Bureau Veritas','SGS','IDIADA','UTAC'],
+  notice:'【原文核心要点】①全车型强制日期：2025年9月1日，非通常误传的&quot;2026年底&quot;；②Annex 9J直流过流测试是Rev.3新增第10项，专针对DC快充，无DC快充功能产品无需此项；③§6.15路径A（热扩散不入乘员舱）是最高效合规路径，建议在产品设计阶段明确大圆柱Pack的热扩散方向控制方案；④振动测试加速度：7~18 Hz下10 g，是相当严苛的工况，须在Pack结构设计阶段充分验证；⑤GB 38031-2025与Rev.3深度对齐，建议提前与TÜV/SGS评估国内测试数据互认可行性。',
+  noticeLbl:'PD关注点（原文核查版）', noticeColor:'#0ea5e9',
+},
+
+{
+  id:'eu-bat-reg', mkt:'EU', flag:'🇪🇺', mktName:'欧盟',
+  std:'EU 2023/1542', full:'欧盟电池与废电池法规（Regulation (EU) 2023/1542，2023年7月12日通过，OJ L 191, 28.7.2023）',
+  status:'must', form:['cyl','pris','pouch'], cats:['chain','recycle'],
+  color:'#6366f1',
+  badges:[{t:'强制',c:'b-must'},{t:'电池护照：2027年2月18日',c:'b-hot'},{t:'再生料：2031/2036年',c:'b-new'}],
+  tags:[{t:'供应链合规',c:'ct-chain'},{t:'回收再生',c:'ct-recycle'}],
+  sections:[
+    {
+      title:'法规框架与关键生效时间表（原文逐条核实）',icon:'📅',iconBg:'#f5f3ff',color:'#6b21a8',
+      clauses:[
+        {no:'Art.96',key:'法规生效',val:'2023年8月17日起生效；逐步替代Directive 2006/66/EC（2027年7月18日起完全废止）'},
+        {no:'Art.10',key:'2024年8月18日（已生效）',val:'EV电池/工业电池（>2kWh）/LMT电池电化学性能和耐久性参数须随产品附带技术文件；SBESS储能系统安全要求强制实施；CE标志义务生效'},
+        {no:'Art.7(1)',key:'EV电池碳足迹申报',val:'2025年2月18日，或碳足迹方法论授权法规+实施法规生效后12个月，取两者之晚——由于EV电池授权法规尚未最终颁布，实际生效日期仍待定',severity:'warn'},
+        {no:'Art.7(1)',key:'工业电池（>2kWh）碳足迹申报',val:'2026年2月18日，或相关授权法规/实施法规生效后18个月，取两者之晚'},
+        {no:'Art.7(2)',key:'EV电池碳足迹性能等级标签',val:'2026年8月18日，或相关授权法规/实施法规生效后18个月，取两者之晚'},
+        {no:'Art.13(6)',key:'QR码强制（所有电池）',val:'2027年2月18日起，所有电池须标注QR码；扫码可访问电池护照（EV电池/工业电池>2kWh/LMT电池）或合规声明（其他电池）',severity:'warn'},
+        {no:'Art.77',key:'电池护照强制（核心条款）',val:'2027年2月18日起：LMT电池、容量>2kWh工业电池、EV电池上市须具备电池护照；注意：此日期与QR码要求同步，均为2027年2月18日',severity:'red'},
+        {no:'Art.8(2)',key:'再生料最低比例第一阶段',val:'2031年8月18日起（原文：from 18 August 2031）：钴≥16%、锂≥6%、镍≥6%、铅≥85%',severity:'warn'},
+        {no:'Art.8(3)',key:'再生料最低比例第二阶段',val:'2036年8月18日起（原文：from 18 August 2036）：钴≥26%、锂≥12%、镍≥15%、铅≥85%',severity:'red'},
+        {no:'Art.7(3)',key:'碳足迹最高限值门槛（EV电池）',val:'2028年2月18日起，或碳足迹上限授权法规生效后18个月，取两者之晚；委托法规须于2026年8月18日前颁布'},
+        {no:'Art.52 修订',key:'供应链尽调义务（已推迟）',val:'原定2025年8月18日；已由Regulation (EU) 2025/1561推迟至2027年8月18日',severity:'warn'},
+      ]
+    },
+    {
+      title:'Art.7 — 碳足迹申报（原文精确条款）',icon:'🌱',iconBg:'#f0fdf4',color:'#15803d',
+      clauses:[
+        {no:'Art.7(1)(d)',key:'碳足迹计量单位（原文）',val:'每千瓦时总能量所对应的CO₂当量千克数（kg CO₂eq per one kWh of the total energy provided by the battery over its expected service life）；按每个电池型号每个生产工厂分别计算申报'},
+        {no:'Art.7(1)',key:'申报内容',val:'①制造商行政信息；②电池型号信息；③生产工厂地理位置；④总体碳足迹值；⑤按生命周期阶段分项碳足迹；⑥EU符合性声明编号；⑦支撑研究公开网页链接'},
+        {no:'Art.7(2)',key:'性能等级标签',val:'须以显眼、清晰、永久性标签标注碳足迹数值及对应性能等级（A为最优）；等级由委托法规规定，每三年审查一次'},
+        {no:'Art.7(3)',key:'碳足迹最高限值',val:'超过上限的EV电池禁止在EU上市；具体数值须由委托法规规定（须于2026年8月18日前颁布）；目前尚无确定数值',severity:'red'},
+        {no:'Art.7 计算方法',key:'LCA方法论要求',val:'须遵循产品环境足迹（PEF）方法（ISO 14067原则）；范围覆盖Scope 1+2+3；不得使用碳抵消（Carbon Offset）减少申报数值；须经EU认可公告机构验证'},
+      ]
+    },
+    {
+      title:'Art.8 — 再生料最低比例（原文精确数字）',icon:'♻️',iconBg:'#fef9c3',color:'#92400e',
+      clauses:[
+        {no:'Art.8(1)',key:'再生料比例记录文件',val:'2028年8月18日起（或授权法规生效后24个月，取晚）：EV电池、>2kWh工业电池、SLI电池须随附文件，说明各型号每年每工厂的钴/锂/镍再生料比例'},
+        {no:'Art.8(2) 原文',key:'2031年最低比例（原文数字）',val:'钴：16%（cobalt）；锂：6%（lithium）；镍：6%（nickel）；铅：85%（lead）——注意：非此前流传的12%/4%/4%，原文已核实',severity:'warn'},
+        {no:'Art.8(3) 原文',key:'2036年最低比例（原文数字）',val:'钴：26%（cobalt）；锂：12%（lithium）；镍：15%（nickel）；铅：85%（lead）——注意：镍为15%非12%，原文已核实',severity:'red'},
+        {no:'Art.8(1)',key:'计算口径',val:'钴/锂/镍：须来自活性材料中的电池制造废料或消费后废料（battery manufacturing waste or post-consumer waste）回收；铅：电池中铅须来自废料回收'},
+        {no:'Annex XII（授权法规）',key:'计算方法',val:'具体计算与核查方法须由委托法规规定（须于2026年8月18日前颁布）；每型号每年每工厂须经认可第三方核查'},
+      ]
+    },
+    {
+      title:'Art.13 &amp; Art.77 — 标签、QR码、电池护照',icon:'🛂',iconBg:'#f5f3ff',color:'#6b21a8',
+      clauses:[
+        {no:'Art.13(1)',key:'标签要求（2026年8月18日）',val:'2026年8月18日起（或实施法规生效后18个月，取晚）：所有电池须标注通用信息标签（容量/化学体系/预期寿命/安全等）'},
+        {no:'Art.13(4)',key:'分类回收符号（2025年8月18日）',val:'2025年8月18日起：所有电池须标注分类回收符号（&quot;crossed-out wheeled bin&quot;），覆盖面积≥最大面最大边3%，最大5×5cm'},
+        {no:'Art.13(6)',key:'QR码（2027年2月18日）',val:'2027年2月18日起：所有电池须标注QR码；EV电池/工业电池>2kWh/LMT电池的QR码须链接至电池护照（Art.77）',severity:'red'},
+        {no:'Art.77(1)',key:'电池护照强制（原文日期）',val:'2027年2月18日起（from 18 February 2027）：LMT电池、容量>2kWh工业电池、EV电池上市须具备电子护照记录——与QR码要求同步，均为2027年2月18日',severity:'red'},
+        {no:'Annex XIII',key:'护照数据分层访问',val:'护照数据按4个访问层级管理：①公众可见（基础信息）；②市场监管/认证机构（详细合规）；③特定商业目的（供应链数据）；④私密（IP保护信息）'},
+        {no:'Art.77 初始阶段',key:'2027年护照初始数据要求',val:'第一阶段（2027年）：电池识别/型号/技术特征基本信息；电化学性能和耐久性技术文件；碳足迹信息（如该授权法规已生效）；注：SOH历史数据等后续阶段再补充'},
+      ]
+    },
+    {
+      title:'Art.52–54 — 供应链尽职调查',icon:'🔍',iconBg:'#fefce8',color:'#854d0e',
+      clauses:[
+        {no:'Art.52',key:'高风险原材料范围',val:'钴、天然石墨、锂、镍（一类高风险原材料）及其前驱体，须进行供应链风险评估'},
+        {no:'Art.53',key:'尽职调查核心义务',val:'建立供应链信息收集体系；识别童工/强迫劳动/环境损害等风险；采取缓解措施；每年公开报告'},
+        {no:'Art.54',key:'第三方审计',val:'每三年须由经认可第三方审计机构对尽职调查体系进行审计'},
+        {no:'推迟通知',key:'生效日期（最新：已推迟至2027年）',val:'原定2025年8月18日；已由EU Regulation 2025/1561推迟至2027年8月18日；中小企业（年营业额<4000万欧元且非集团成员）可豁免',severity:'warn'},
+      ]
+    },
+    {
+      title:'Art.10 &amp; Annex IV — EV电池性能耐久性要求',icon:'📊',iconBg:'#eff6ff',color:'#1d4ed8',
+      clauses:[
+        {no:'Art.10(1)',key:'技术文件要求（2024年8月18日已生效）',val:'EV电池须随附包含Annex IV Part A所列电化学性能和耐久性参数数值的技术文件；包含：额定容量（Ah）、能量（Wh）、功率（W）、效率（%）、循环寿命（次）、日历寿命（年）、工作温度范围、充电时间等'},
+        {no:'Annex VII',key:'BMS须记录并可访问的参数',val:'SOC、SOH（容量保持率%）、完全等效循环次数（FEOC）、剩余能量（Wh）、剩余容量（Ah）、内阻（Ω）——须通过BMS提供非歧视性只读访问'},
+      ]
+    }
+  ],
+  labs:['SGS','Bureau Veritas','Intertek','TÜV SÜD','DNV','Carbon Trust','RINA'],
+  notice:'【原文重大纠错3项】①电池护照与QR码强制日期均为2027年2月18日（非此前流传的2026年2月）；②再生料比例第一阶段为2031年8月（非2030年），且数字为钴16%/锂6%/镍6%（非12%/4%/4%）；③碳足迹上限门槛为2028年2月18日起（前提是2026年8月前颁布委托法规）。供应链尽调已推迟至2027年8月（EU 2025/1561修订）。碳足迹授权法规（EV电池方法论）尚未最终颁布，须持续关注最新动态——一旦颁布将触发多个时间节点的连锁生效。',
+  noticeLbl:'PD关注点（原文核查版）', noticeColor:'#6366f1',
+},
+
+{
+  id:'un383', mkt:'EU', flag:'🌍', mktName:'全球（运输）',
+  std:'UN 38.3 Rev.8', full:'联合国《关于危险货物运输的建议书》试验和标准手册第38.3节',
+  status:'must', form:['cyl','pris','pouch'], cats:['safety'],
+  color:'#64748b',
+  badges:[{t:'运输强制（全球）',c:'b-must'},{t:'Rev.8已更新',c:'b-new'}],
+  tags:[{t:'产品安全',c:'ct-safety'}],
+  sections:[
+    {
+      title:'八项测试（T1-T8）',icon:'🧪',iconBg:'#f8fafc',color:'#64748b',
+      clauses:[
+        {no:'T1',key:'高度模拟',val:'模拟低气压（11.6kPa）6h，相当于高空15,240m；测后无漏液、无爆炸、开路电压≥初始值90%'},
+        {no:'T2',key:'热测试',val:'72°C高温3h；−40°C低温3h，交替循环10次；测后无漏液、无爆炸、开路电压≥初始值90%'},
+        {no:'T3',key:'振动',val:'正弦振动：1g, 7-200Hz，扫频3h（三轴各1h）；测后无漏液、无爆炸、开路电压≥初始值90%'},
+        {no:'T4',key:'冲击（机械）',val:'25g峰值，6ms半正弦波，三轴各3次（共18次）；测后同T1要求'},
+        {no:'T5',key:'外部短路',val:'单体55°C或最高工作温度（取高值），外接阻抗≤0.1Ω短路1h；温度降至比环境温度高不超过10°C；无爆炸、无起火'},
+        {no:'T6',key:'撞击（针刺/挤压）',val:'针刺：直径3mm钢针以8cm/s刺穿；挤压：圆柱13kN，平板13kN；测后无爆炸、无起火'},
+        {no:'T7',key:'过充（仅可充电）',val:'以1×It（或制造商允许最大充电电流）进行过充至额定电压2倍或24h（取先达到者）；无爆炸、无起火'},
+        {no:'T8',key:'强制放电',val:'以1×It进行强制放电至各单体电压≤0V；无爆炸、无起火'},
+      ]
+    },
+    {
+      title:'Rev.8新增要求（大尺寸电芯）',icon:'🆕',iconBg:'#fef9c3',color:'#92400e',
+      clauses:[
+        {no:'Rev.8新增',key:'大尺寸电芯定义',val:'单体额定能量>12Wh（含4680等大圆柱单体）须满足额外要求',severity:'warn'},
+        {no:'Rev.8新增',key:'大尺寸单体热扩散',val:'须提供安全分析报告，说明单体热失控触发后是否会引发电池组级别的热扩散传播',severity:'warn'},
+        {no:'Rev.8新增',key:'大尺寸Pack额外测试',val:'含大尺寸电芯的电池Pack须额外通过模拟运输条件下的热稳定性验证'},
+        {no:'豁免条件',key:'小批量豁免',val:'样品数<25件且电池组额定能量<12Wh的可豁免T3/T4测试'},
+      ]
+    }
+  ],
+  labs:['TÜV','SGS','Intertek','Bureau Veritas','CESI'],
+  notice:'4680大圆柱单体额定能量约14-18Wh，超过12Wh门槛，须按Rev.8新增大尺寸要求进行额外安全分析，建议在产品定型前确认Rev.8测试报告覆盖范围，避免影响出货时间。',
+  noticeLbl:'PD关注点', noticeColor:'#64748b',
+},
+
+// ──────────── 北美 ────────────
+{
+  id:'fmvss305', mkt:'US', flag:'🇺🇸', mktName:'美国',
+  std:'FMVSS 305', full:'联邦机动车安全标准第305条：电动车辆动力电源（49 CFR §571.305）',
+  status:'must', form:['cyl','pris','pouch'], cats:['safety'],
+  color:'#8b5cf6',
+  badges:[{t:'强制',c:'b-must'},{t:'2025年修订',c:'b-new'}],
+  tags:[{t:'产品安全',c:'ct-safety'}],
+  sections:[
+    {
+      title:'碰撞后安全要求',icon:'💥',iconBg:'#f5f3ff',color:'#6b21a8',
+      clauses:[
+        {no:'S5.1',key:'电解液溢出限值',val:'碰撞测试后30分钟内，车辆外部电解液溢出量≤5g；碰撞后60分钟内，乘员舱内电解液溢出量≤0g',severity:'warn'},
+        {no:'S5.2',key:'绝缘电阻要求',val:'碰撞后，高压系统对车身绝缘电阻≥500Ω/V（交流电路）或≥100Ω/V（直流电路）'},
+        {no:'S5.3',key:'热失控要求',val:'碰撞后20分钟内，REESS不得发生起火或爆炸（2025年修订新增：监测期延长至60分钟）',severity:'red'},
+        {no:'S5.4',key:'高压电气安全',val:'碰撞后，高压连接器若暴露在乘员可触及位置，须在100ms内断开或满足触摸安全要求（<60V或<0.5mA）'},
+      ]
+    },
+    {
+      title:'碰撞测试工况',icon:'🚗',iconBg:'#f5f3ff',color:'#6b21a8',
+      clauses:[
+        {no:'S6',key:'正面刚性壁障碰撞',val:'56km/h（35mph）满载与刚性壁障碰撞（与FMVSS 208正面碰撞共用工况）'},
+        {no:'S7',key:'移动变形障碍侧碰',val:'54km/h（33.5mph）MDB侧面碰撞（与FMVSS 214共用工况）'},
+        {no:'S8',key:'极点侧面碰撞',val:'32km/h（20mph）、偏置75mm碳钢极点侧面碰撞'},
+        {no:'S9',key:'后碰撞测试（2022年新增）',val:'56km/h满载后碰撞；REESS须满足S5.1-S5.4要求'},
+      ]
+    },
+    {
+      title:'与UN R100主要差异',icon:'🔄',iconBg:'#eff6ff',color:'#1d4ed8',
+      clauses:[
+        {no:'关键差异1',key:'正面碰撞',val:'FMVSS 305覆盖正面碰撞，UN R100不包含正面碰撞工况（仅侧碰、挤压）；须两套数据'},
+        {no:'关键差异2',key:'监测时间',val:'FMVSS 305 S5.3监测期60min（修订后），UN R100热失控后5min警报+5min逃生窗口；要求口径不同'},
+        {no:'关键差异3',key:'漏液量限值',val:'FMVSS 305明确限定5g（外部）/0g（乘员舱），UN R100 Rev.3无具体漏液量数值限制'},
+        {no:'关键差异4',key:'高压断开',val:'FMVSS 305要求100ms内断开，UN R100无具体时间要求'},
+      ]
+    }
+  ],
+  labs:['MGA Research','Dynamic Research','KARCO Engineering','Exponent'],
+  notice:'整车厂主导FMVSS 305型式批准，CATL须提供Pack级兼容性测试数据包。特别注意：正面碰撞工况为FMVSS 305独有，国内GB/T 31485的碰撞测试结果不能直接替代，建议准备专项FMVSS测试计划。',
+  noticeLbl:'PD关注点', noticeColor:'#8b5cf6',
+},
+
+{
+  id:'ul2580', mkt:'US', flag:'🇺🇸', mktName:'美国',
+  std:'UL 2580 Ed.3', full:'电动汽车用电池标准（UL Standards Safety，第3版）',
+  status:'vol', form:['cyl','pris','pouch'], cats:['safety'],
+  color:'#8b5cf6',
+  badges:[{t:'自愿（OEM事实强制）',c:'b-vol'}],
+  tags:[{t:'产品安全',c:'ct-safety'}],
+  sections:[
+    {
+      title:'核心安全测试要求',icon:'⚡',iconBg:'#f5f3ff',color:'#6b21a8',
+      clauses:[
+        {no:'§33',key:'过充保护',val:'以最大允许充电电流的1.5倍过充至额定电压的150%，或连续24h（取先达到）；测后1h内无起火、无爆炸'},
+        {no:'§34',key:'过放保护',val:'以1C放电至单体电压<0V，连续24h；测后1h内无起火、无爆炸（允许漏液但不得超过150mL）'},
+        {no:'§35',key:'外部短路',val:'满充状态下，接入外部≤5mΩ阻抗短路，持续至REESS温度降至比环境高10°C以内；无起火、无爆炸'},
+        {no:'§36',key:'热失控扩散测试',val:'针刺或外部加热触发单体热失控；扩散至相邻单体后1h内无起火爆炸（注：大圆柱需专项评估）',severity:'red'},
+        {no:'§38',key:'机械撞击',val:'13.6kg锤从610mm高度自由落体至电池上盖；无起火、无爆炸；绝缘电阻≥500Ω/V'},
+        {no:'§40',key:'温度冲击',val:'30min内从−40°C升温至85°C，循环10次；测后性能损失≤初始容量20%'},
+        {no:'§42',key:'盐雾测试',val:'5%盐水，35°C，300h；测后外观无腐蚀性损伤，电性能无显著降低'},
+        {no:'§46',key:'水浸（IP67验证）',val:'1m水深，30min浸泡；绝缘电阻≥500Ω/V，无起火、爆炸、漏液'},
+      ]
+    },
+    {
+      title:'大圆柱专项注意事项（Ed.3补充）',icon:'🔋',iconBg:'#fef9c3',color:'#92400e',
+      clauses:[
+        {no:'Ed.3补充',key:'热失控传播路径评估',val:'大尺寸圆柱单体须提供热模拟分析报告，说明Pack内热扩散传播路径及阻断措施',severity:'warn'},
+        {no:'Ed.3补充',key:'单体安全阀评估',val:'4680等大圆柱安全阀喷发方向须不朝向相邻单体，或有防护隔热材料'},
+        {no:'工厂审查',key:'UL现场审查',val:'初次认证须UL工程师现场工厂审查（生产流程、测试设备、质量管控体系）；通过后每年跟踪审查'},
+      ]
+    }
+  ],
+  labs:['UL LLC（Northbrook）','MET Laboratories','Intertek（美国实验室）'],
+  notice:'GM Ultium、Ford BlueOval、Stellantis等主流北美OEM在供应商技术规范中均要求UL 2580 Listed证书。热失控传播测试是大圆柱产品的核心挑战，建议针对4680单体热失控特性提前完成传播路径分析。',
+  noticeLbl:'PD关注点', noticeColor:'#8b5cf6',
+},
+
+{
+  id:'carb-zev', mkt:'US', flag:'🇺🇸', mktName:'美国（加州+16州）',
+  std:'CARB ZEV / ACC II', full:'加州高级清洁汽车II法规（Advanced Clean Cars II）——电池担保要求',
+  status:'must', form:['cyl','pris','pouch'], cats:['chem'],
+  color:'#059669',
+  badges:[{t:'强制（加州+16州）',c:'b-must'},{t:'联邦压力下仍有效',c:'b-hot'}],
+  tags:[{t:'电化学性能',c:'ct-chem'}],
+  sections:[
+    {
+      title:'电池担保要求',icon:'📋',iconBg:'#f0fdf4',color:'#15803d',
+      clauses:[
+        {no:'ACC §1962.2',key:'现行担保期（MY2024-2025）',val:'8年/100,000英里（取先达到者），电池容量保持率≥70%额定容量'},
+        {no:'ACC II §1962.4',key:'升级担保期（MY2026+）',val:'15年/150,000英里（取先达到者），容量保持率≥70%（讨论中：75%）',severity:'warn'},
+        {no:'§1962.4(b)',key:'容量保持监控',val:'车辆须通过OBD实时监测SOH，并在容量降至75%时向驾驶员发出提醒'},
+        {no:'§1962.4(c)',key:'充电损失担保',val:'须担保不因电池老化导致充电时间超过正常充电时间的20%以上'},
+      ]
+    },
+    {
+      title:'合规数据要求',icon:'📊',iconBg:'#f0fdf4',color:'#15803d',
+      clauses:[
+        {no:'担保声明',key:'书面担保文件',val:'须向消费者提供书面担保凭证，明确担保期、覆盖范围（制造缺陷、性能缺陷均须覆盖）、理赔流程'},
+        {no:'寿命预测',key:'衰减曲线',val:'OEM须向CARB提交基于实测数据的电池容量衰减曲线预测，证明可满足担保期限内的容量保持要求'},
+        {no:'召回义务',key:'性能不达标召回',val:'若在担保期内发现批量性容量保持不达标（超过一定比例），须启动免费维修或更换义务'},
+      ]
+    }
+  ],
+  labs:['Intertek（电池循环寿命）','TÜV（日历寿命）','NREL（容量衰减分析）'],
+  notice:'ACC II担保从8年/100k英里升级至15年/150k英里，与CATL的质保承诺边界谈判直接相关。建议产品开发阶段纳入15年加速老化测试协议，为商务谈判提供数据支撑。',
+  noticeLbl:'PD关注点', noticeColor:'#059669',
+},
+
+// ──────────── 日本 ────────────
+{
+  id:'pse-jp', mkt:'JP', flag:'🇯🇵', mktName:'日本',
+  std:'PSE 附录12（蓄電池）', full:'日本电气用品安全法（PSE法）附录12——车用锂离子蓄电池安全要求',
+  status:'must', form:['cyl','pris','pouch'], cats:['safety'],
+  color:'#f59e0b',
+  badges:[{t:'强制（PSE法管控）',c:'b-must'},{t:'新版2025年8月生效',c:'b-hot'}],
+  tags:[{t:'产品安全',c:'ct-safety'}],
+  sections:[
+    {
+      title:'PSE认证要求（附录12新版）',icon:'🔒',iconBg:'#fef9c3',color:'#92400e',
+      clauses:[
+        {no:'附录12',key:'认证路径',val:'分为&quot;特定电气用品&quot;（附有PSE◇标志，须第三方认证机构认证）和&quot;特定外电气用品以外&quot;（附有PSE○标志，自我认证）；车用蓄电池组属于◇类'},
+        {no:'附录12新版',key:'新版截止时间',val:'2025年8月31日起停止签发依旧版附录12的新认证证书；已获证书继续有效至到期日；新申请须符合新版要求',severity:'red'},
+        {no:'新版§3',key:'热失控传播测试',val:'新增：针刺触发单体热失控后，Pack须满足规定时间内不扩散（具体参数待原文提供）',severity:'warn'},
+        {no:'§4.1',key:'过充保护',val:'以最大允许充电电流的1倍过充至额定电压的110%（或125%，按设计），无起火、爆炸'},
+        {no:'§4.2',key:'过放保护',val:'以0.2C持续放电至单体电压≤0V，无起火、爆炸'},
+        {no:'§4.3',key:'外部短路',val:'满充状态，<30mΩ短路（环境温度20±5°C），持续24h；无起火、爆炸'},
+        {no:'§4.4',key:'热暴露',val:'130°C烘箱中放置10min，无起火、爆炸（单体级）'},
+        {no:'§4.5',key:'振动',val:'按JIS C 8714相关要求，无漏液、起火、爆炸'},
+      ]
+    },
+    {
+      title:'认证流程',icon:'📝',iconBg:'#fef9c3',color:'#92400e',
+      clauses:[
+        {no:'认证机构',key:'PSE指定认证机构',val:'JUSE（日本科学技術連盟）、JET（日本電気安全環境研究所）、TÜV Rheinland日本法人、SGS日本'},
+        {no:'工厂审查',key:'现场审查要求',val:'每三年须对生产工厂进行一次现场产品审查（可指定日本认可机构委托中国当地机构执行）'},
+        {no:'中文材料',key:'申请材料要求',val:'技术文件须提供日文版或指定语言版本；须有日本当地授权代理人'},
+      ]
+    }
+  ],
+  labs:['JET（日本電気安全環境研究所）','JARI','TÜV Rheinland Japan','SGS Japan'],
+  notice:'⚠ 紧急：2025年8月31日截止日已过，须立即确认所有在供日本客户的PSE证书状态（有效期），及时启动新版附录12认证。建议与JET或TÜV Rheinland日本确认新版测试要求细节，原文附录12新版是最高优先级待补文件。',
+  noticeLbl:'PD关注点', noticeColor:'#f59e0b',
+},
+
+{
+  id:'jis-c8714', mkt:'JP', flag:'🇯🇵', mktName:'日本',
+  std:'JIS C 8714:2019', full:'携帯用リチウムイオン蓄電池安全性試験（JIS C 8714大型延伸）',
+  status:'vol', form:['cyl','pris','pouch'], cats:['safety','chem'],
+  color:'#f59e0b',
+  badges:[{t:'自愿（OEM参考基准）',c:'b-vol'}],
+  tags:[{t:'产品安全',c:'ct-safety'},{t:'电化学性能',c:'ct-chem'}],
+  sections:[
+    {
+      title:'主要测试项目',icon:'🧪',iconBg:'#fef9c3',color:'#92400e',
+      clauses:[
+        {no:'§7.3.1',key:'正常充放电测试',val:'标准充放电循环，确认容量、效率满足规格'},
+        {no:'§7.3.2',key:'过充试验',val:'以最大充电电流1倍过充至单体电压5V（锂离子体系），或额定电压的110%，无起火、爆炸'},
+        {no:'§7.3.3',key:'强制放电试验',val:'以最大放电电流1倍将电池放电至0V；无起火、爆炸'},
+        {no:'§7.3.4',key:'外部短路试验',val:'满充单体直接外部短路，持续24h；无起火、爆炸；最高温度≤120°C（单体表面）'},
+        {no:'§7.4.1',key:'落下试验',val:'满充电池从1m高度落下，六面各一次（共6次）；无漏液、起火、爆炸'},
+        {no:'§7.4.2',key:'振动试验',val:'10-55Hz，0.75mm振幅（>18Hz时1.6g），三轴各30min；无漏液、起火、爆炸'},
+        {no:'§7.4.3',key:'冲击试验',val:'三轴各15g/11ms半正弦波冲击3次（共18次）；无漏液、起火、爆炸'},
+        {no:'§7.5.1',key:'高温暴露',val:'85°C放置4h；无漏液（允许轻微变形）；开路电压≥初始值85%'},
+        {no:'§7.5.2',key:'温度循环',val:'−20°C~75°C各存储3h，共循环5次；无漏液；容量≥初始值90%'},
+      ]
+    }
+  ],
+  labs:['JARI','JET','BatteryTestJapan','TÜV Rheinland'],
+  notice:'日系OEM（丰田/本田/日产/马自达）的供应商技术协议通常引用JIS C 8714作为单体和模组安全测试基准，提前准备完整测试报告包可加快OEM验证流程。',
+  noticeLbl:'PD关注点', noticeColor:'#f59e0b',
+},
+
+// ──────────── 韩国 ────────────
+{
+  id:'kc-kr', mkt:'KR', flag:'🇰🇷', mktName:'韩国',
+  std:'KC 62133-2 / KS C IEC 62660', full:'韩国KC安全认证——电动车辆用锂离子蓄电池',
+  status:'must', form:['cyl','pris','pouch'], cats:['safety'],
+  color:'#10b981',
+  badges:[{t:'强制',c:'b-must'}],
+  tags:[{t:'产品安全',c:'ct-safety'}],
+  sections:[
+    {
+      title:'KC认证要求（基于IEC 62133-2）',icon:'🔒',iconBg:'#f0fdf4',color:'#15803d',
+      clauses:[
+        {no:'§8.1',key:'过充试验',val:'以最大允许充电电流1倍过充，至额定电压的110%或2倍（以最低值为准），持续12h；无起火、爆炸'},
+        {no:'§8.2',key:'强制放电',val:'以1C电流将单体放至0V，外接2Ω电阻放电1h；无起火、爆炸'},
+        {no:'§8.3',key:'热失控传播',val:'针刺触发单体热失控，电池Pack内热失控传播后须满足规定安全要求（原文待补全）',severity:'warn'},
+        {no:'§8.4',key:'热暴露',val:'130°C烘箱放置10min（单体）；无起火、爆炸'},
+        {no:'§8.5',key:'挤压',val:'圆柱单体或壳体以每分钟≤12mm/min速度挤压至变形30%或力达13kN停止；无起火、爆炸'},
+        {no:'§8.6',key:'低气压',val:'11.6kPa，25°C，6h；无泄漏、起火、爆炸；开路电压≥初始值90%'},
+        {no:'§8.7',key:'跌落',val:'满充单体从1m高度自由落体，三轴各一次（6面）；无漏液、起火、爆炸'},
+        {no:'§8.8',key:'振动',val:'7-50Hz振动，15min；三轴各1次；无漏液、起火、爆炸'},
+      ]
+    },
+    {
+      title:'KC认证程序',icon:'📝',iconBg:'#f0fdf4',color:'#15803d',
+      clauses:[
+        {no:'KATS',key:'主管机构',val:'韩国国家技术标准院（KATS）负责KC认证标准制定和监督'},
+        {no:'KAB',key:'认证机构',val:'KTL（韩国测试研究院）、KCL（건설생활환경시험연구원）、KERI（韩国电气研究院）为KC指定认证机构'},
+        {no:'工厂审查',key:'年度跟踪检查',val:'初次认证后，每年进行跟踪检查，每三年重新进行全项测试'},
+        {no:'本地代表',key:'韩国本地联络要求',val:'外国制造商须指定韩国境内的法人作为KC认证代理人'},
+      ]
+    },
+    {
+      title:'ESS（储能）额外要求',icon:'⚡',iconBg:'#f0fdf4',color:'#15803d',
+      clauses:[
+        {no:'ESS安全规程',key:'接地故障检测',val:'2022年起强制：ESS用电池须配备接地故障检测装置，异常时自动断开并报警'},
+        {no:'ESS安全规程',key:'内压缓解装置',val:'须配备防止内压过高的缓解装置（泄压阀等）'},
+        {no:'ESS安全规程',key:'灭火系统',val:'电池舱须配备独立灭火系统，热失控时自动启动'},
+      ]
+    }
+  ],
+  labs:['KTL（韩国测试研究院）','KCL','KERI'],
+  notice:'大圆柱作为相对新型电芯形态，建议与KTL/KATS确认是否有针对4680的KC专项补充要求。韩国市场对电池包EMC要求也在加强，建议同步准备KCS EMC测试报告。',
+  noticeLbl:'PD关注点', noticeColor:'#10b981',
+},
+
+// ──────────── 印度 ────────────
+{
+  id:'ais038', mkt:'IN', flag:'🇮🇳', mktName:'印度',
+  std:'AIS 038 Rev.2', full:'印度汽车电动汽车电池系统安全要求（修订版2，2023年10月强制）',
+  status:'must', form:['cyl','pris','pouch'], cats:['safety'],
+  color:'#f97316',
+  badges:[{t:'强制（2023年10月起）',c:'b-must'},{t:'Rev.2最新版',c:'b-new'}],
+  tags:[{t:'产品安全',c:'ct-safety'}],
+  sections:[
+    {
+      title:'必要安全要求',icon:'🔒',iconBg:'#fff7ed',color:'#c2410c',
+      clauses:[
+        {no:'§5.1',key:'振动测试',val:'按IEC 60068-2-64进行随机振动；X、Y、Z三轴各2h；频率2.5-2000Hz；测后无泄漏（>50ml为不合格）、无起火、爆炸；绝缘电阻≥500Ω/V'},
+        {no:'§5.2',key:'机械冲击',val:'50g/11ms半正弦波；三轴各3次（共18次）；测后无泄漏、无起火、爆炸'},
+        {no:'§5.3',key:'热冲击',val:'−40°C→75°C，各存储3h，循环5次；测后外观无变化，容量衰减≤5%'},
+        {no:'§5.4',key:'外部短路',val:'满充状态，外接≤0.1Ω阻抗，55°C下持续1h（或温度降至比环境高10°C为止）；无起火、爆炸'},
+        {no:'§5.5',key:'过充测试',val:'以1C过充至额定电压的150%，持续1h；无起火、爆炸（允许变形和漏液）'},
+        {no:'§5.6',key:'强制放电',val:'已放完电的电池以1C进行逆向充电（强制过放），持续90min；无起火、爆炸'},
+        {no:'§5.7',key:'热失控传播（Rev.2新增）',val:'针刺或外部加热触发单体热失控；热失控发生后2小时内，Pack中热失控不得扩散至未受影响的单体；驾驶员预警须在扩散发生前5min发出',severity:'red'},
+        {no:'§5.8',key:'绝缘电阻',val:'试验前后，高压系统对车身绝缘电阻均须≥500Ω/V（交流）或≥100Ω/V（直流）'},
+      ]
+    },
+    {
+      title:'认证流程（ARAI）',icon:'📝',iconBg:'#fff7ed',color:'#c2410c',
+      clauses:[
+        {no:'主管机构',key:'ARAI认证',val:'汽车研究协会（ARAI，Pune）为指定技术服务机构，负责AIS 038测试认证'},
+        {no:'替代机构',key:'其他TSP',val:'NATRIP（国家汽车测试研发中心），ICAT（汽车测试中心）也可进行认证测试'},
+        {no:'文件要求',key:'申请材料',val:'系统描述、电路图、BMS功能说明、电芯安全数据表、热管理系统说明；须英文版'},
+        {no:'互认',key:'与GB标准互认',val:'AIS 038 Rev.2热失控要求与GB 38031-2025基本对齐，建议积极推动ARAI接受GB 38031测试报告部分互认',severity:'warn'},
+      ]
+    }
+  ],
+  labs:['ARAI（Pune）','NATRIP','ICAT（Manesar）'],
+  notice:'Rev.2热失控传播要求（2h不扩散）与GB 38031-2025要求趋同，若GB认证测试条件可被ARAI接受，可节省大量重复测试时间和成本。建议提前与ARAI进行预沟通，评估互认可行性。',
+  noticeLbl:'PD关注点', noticeColor:'#f97316',
+},
+
+// ──────────── 东南亚 ────────────
+{
+  id:'tisi-sea', mkt:'SEA', flag:'🇹🇭', mktName:'泰国',
+  std:'TISI 2938', full:'泰国工业标准EV电池安全标准（基于UN R100并增加热带气候要求）',
+  status:'must', form:['pris','pouch','cyl'], cats:['safety','env'],
+  color:'#ec4899',
+  badges:[{t:'强制',c:'b-must'},{t:'2024年更新',c:'b-new'}],
+  tags:[{t:'产品安全',c:'ct-safety'},{t:'环境适应性',c:'ct-env'}],
+  sections:[
+    {
+      title:'核心要求（参照UN R100）',icon:'🔒',iconBg:'#fdf2f8',color:'#9d174d',
+      clauses:[
+        {no:'技术依据',key:'基础标准',val:'技术要求基本参照UN R100 Rev.2，泰国本地化补充热带气候测试要求'},
+        {no:'TISI补充1',key:'高温循环测试',val:'45°C±2°C高温环境，SOC 20%→80%循环充放电1000次；容量保持率≥80%；无安全事故',severity:'warn'},
+        {no:'TISI补充2',key:'高温存储',val:'50°C±2°C存储30天（满充）；容量保持率≥85%；无漏液、变形'},
+        {no:'TISI补充3',key:'湿热测试',val:'40°C±2°C，90±5%RH，168h；测后绝缘电阻≥500Ω/V；外观无腐蚀'},
+        {no:'基础安全',key:'同UN R100热失控',val:'热失控后5min内发出警报，5min内不起火爆炸（同UN R100 Rev.3要求）'},
+      ]
+    },
+    {
+      title:'认证程序',icon:'📝',iconBg:'#fdf2f8',color:'#9d174d',
+      clauses:[
+        {no:'TISI',key:'主管机构',val:'泰国工业标准局（TISI）'},
+        {no:'有效期',key:'证书有效期',val:'3年，期间接受TISI年度监督抽检'},
+        {no:'本地测试',key:'测试地点',val:'可在TISI认可实验室进行，包括在泰国境内和部分境外认可实验室'},
+      ]
+    }
+  ],
+  labs:['TISI Lab','SGS Thailand','Bureau Veritas Thailand','TÜV Rheinland Thailand'],
+  notice:'泰国是东南亚最大增量EV市场，中国车企（比亚迪/长安/哈弗）大量在泰投产。45°C/1000次高温循环测试是泰国标准的差异化要求，热带气候耐久性须在产品开发阶段纳入测试矩阵。',
+  noticeLbl:'PD关注点', noticeColor:'#ec4899',
+},
+
+];
+
+// ── 矩阵数据 ──
+const MKTS = ['EU','UK','US','JP','KR','IN','SEA'];
+const MF = {EU:'🇪🇺',UK:'🇬🇧',US:'🇺🇸',JP:'🇯🇵',KR:'🇰🇷',IN:'🇮🇳',SEA:'🌏'};
+const MATRIX = [
+  {std:'UN R100 Rev.3',cat:'产品安全',cells:{EU:'must',UK:'must',US:'vol',JP:'must',KR:'vol',IN:'vol',SEA:'vol'}},
+  {std:'EU 2023/1542 电池法',cat:'供应链/回收',cells:{EU:'must',UK:'plan',US:'na',JP:'na',KR:'na',IN:'na',SEA:'na'}},
+  {std:'UN 38.3 Rev.8',cat:'运输安全',cells:{EU:'must',UK:'must',US:'must',JP:'must',KR:'must',IN:'must',SEA:'must'}},
+  {std:'ECE R10 EMC',cat:'电磁兼容',cells:{EU:'must',UK:'must',US:'na',JP:'vol',KR:'vol',IN:'vol',SEA:'na'}},
+  {std:'FMVSS 305',cat:'产品安全',cells:{EU:'na',UK:'na',US:'must',JP:'na',KR:'na',IN:'na',SEA:'na'}},
+  {std:'UL 2580 Ed.3',cat:'产品安全',cells:{EU:'na',UK:'na',US:'vol',JP:'na',KR:'na',IN:'na',SEA:'na'}},
+  {std:'CARB ZEV/ACC II',cat:'电化学性能',cells:{EU:'na',UK:'na',US:'must',JP:'na',KR:'na',IN:'na',SEA:'na'}},
+  {std:'PSE 附录12（新版）',cat:'产品安全',cells:{EU:'na',UK:'na',US:'na',JP:'must',KR:'na',IN:'na',SEA:'na'}},
+  {std:'JIS C 8714',cat:'产品安全',cells:{EU:'na',UK:'na',US:'na',JP:'vol',KR:'na',IN:'na',SEA:'na'}},
+  {std:'KC 62133-2',cat:'产品安全',cells:{EU:'na',UK:'na',US:'na',JP:'na',KR:'must',IN:'na',SEA:'na'}},
+  {std:'AIS 038 Rev.2',cat:'产品安全',cells:{EU:'na',UK:'na',US:'na',JP:'na',KR:'na',IN:'must',SEA:'na'}},
+  {std:'BIS IS 16046',cat:'产品安全',cells:{EU:'na',UK:'na',US:'na',JP:'na',KR:'na',IN:'must',SEA:'na'}},
+  {std:'碳足迹申报',cat:'供应链合规',cells:{EU:'must',UK:'plan',US:'na',JP:'na',KR:'na',IN:'na',SEA:'na'}},
+  {std:'再生料比例（2030+）',cat:'回收再生',cells:{EU:'plan',UK:'plan',US:'na',JP:'na',KR:'na',IN:'na',SEA:'na'}},
+  {std:'TISI 2938（泰国）',cat:'产品安全/环境',cells:{EU:'na',UK:'na',US:'na',JP:'na',KR:'na',IN:'na',SEA:'must'}},
+];
+
+const TIMELINE = [
+  {year:'2025年8月31日（已截止）',title:'日本PSE附录12旧版证书停发',body:'2025年8月31日后不再签发依旧版附录12的PSE认证证书。已获证书继续有效至到期日；新申请须符合新版要求（含热失控传播测试）。',impact:'须立即核查所有日本在供产品的PSE证书有效期，过期前提前启动新版申请。',impactLevel:'high',mkts:['JP'],color:'#f59e0b'},
+  {year:'2027年2月18日（原文核实）',title:'欧盟QR码+电池护照同步强制',body:'2027年2月18日起：①所有电池须标注QR码（Art.13(6)）；②EV电池/工业电池>2kWh/LMT电池须具备数字电池护照（Art.77）。注意：此前流传的2026年2月日期系误读，原文明确为2027年2月18日。',impact:'准备时间比此前认为的更充裕，但供应链LCA数据体系建设、BMS数据格式对接宜提前启动，避免2027年临期压力。',impactLevel:'high',mkts:['EU'],color:'#6366f1'},
+  {year:'2025年9月1日（全车型强制）',title:'UN R100 Rev.3：所有型式认证须满足',body:'2025年9月1日起，所有型式认证（含现有车型延续认证）须满足Rev.3，Rev.2认证不再有效。关键新增：Annex 9J直流过流测试（仅DC快充车型）、振动高达10g加速度、热扩散§6.15合规路径须明确。',impact:'确认在研欧洲项目已切换至Rev.3测试矩阵；重点评估Annex 9J（DC过流）和§6.15（热扩散路径A vs B）的合规方案。',impactLevel:'high',mkts:['EU','UK'],color:'#0ea5e9'},
+  {year:'2027年预计',title:'欧盟碳足迹性能门槛上线',body:'欧盟电池法碳足迹上限门槛生效，预计LFP约70kgCO₂/kWh、NMC约100kgCO₂/kWh（待委托法规确认）。超标产品禁止入市。',impact:'须尽快启动全供应链LCA核算（Scope 1+2+3），并与主要原材料供应商建立碳数据共享机制。',impactLevel:'high',mkts:['EU'],color:'#6366f1'},
+  {year:'2027年预计',title:'CARB ACC II电池担保升级',body:'加州ACC II新阶段：担保期从8年/100k英里升级至15年/150k英里；容量保持率要求讨论中升至75%。',impact:'须与北美客户明确新担保边界，评估现有产品线在15年使用条件下的容量保持能力，可能需要加速老化验证。',impactLevel:'mid',mkts:['US'],color:'#8b5cf6'},
+  {year:'2031年8月18日（原文纠正）',title:'欧盟再生料最低比例强制（数字已原文核实）',body:'Art.8(2)原文：钴≥16%、锂≥6%、镍≥6%、铅≥85%（非此前流传的12%/4%/4%）；2036年8月18日第二阶段Art.8(3)：钴≥26%、锂≥12%、镍≥15%、铅≥85%（镍为15%非12%）。',impact:'数字高于此前预期，对正极钴镍供应链影响更大；须提前规划再生钴/锂/镍采购体系，并要求供应商提供可核查的回收料来源文件。',impactLevel:'high',mkts:['EU'],color:'#6366f1'},
+  {year:'2027年预计',title:'印尼EV电池SNI专项标准发布',body:'印尼BSN正在制定EV专项电池SNI标准，预计2026年发布、2027年强制。技术要求参照IEC 62660并增加热带气候补充测试。',impact:'现阶段可用IEC 62133过渡。建议关注标准征求意见稿，参与标准制定过程。',impactLevel:'mid',mkts:['SEA'],color:'#ec4899'},
+  {year:'2025年起持续',title:'美国UL 2580 Ed.3大圆柱补充要求',body:'UL 2580第3版新增大尺寸圆柱单体热失控传播路径分析要求，4680等大圆柱需专项安全分析报告。北美OEM在供应商协议中持续强化此要求。',impact:'4680大圆柱入北美市场须提前完成UL 2580 Ed.3专项评估，建议与UL工程师预沟通测试方案。',impactLevel:'mid',mkts:['US'],color:'#8b5cf6'},
+];
+
+// ═══════════════════════════════════════════════════
+//  STATE
+// ═══════════════════════════════════════════════════
+let ST = {mkt:'all',cat:'all',view:'cards',q:''};
+let searchResultsAll = [];
+let showingAllResults = false;
+const RESULTS_PREVIEW = 8;
+
+// ═══════════════════════════════════════════════════
+//  SEARCH ENGINE  ── clause-level
+// ═══════════════════════════════════════════════════
+function highlight(text, q){
+  if(!q) return text;
+  const re = new RegExp(`(${q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&amp;')})`, 'gi');
+  return text.replace(re, '<mark class=&quot;hl&quot;>$1</mark>');
+}
+
+function searchClauses(q){
+  if(!q || q.length < 2) return [];
+  const ql = q.toLowerCase();
+  const hits = [];
+  for(const cert of CERTS){
+    // search cert-level fields
+    const certText = [cert.std, cert.full, cert.mktName].join(' ').toLowerCase();
+    for(const sec of cert.sections){
+      for(const cl of sec.clauses){
+        const clText = [cl.no||'', cl.key||'', cl.val||'', cl.note||''].join(' ').toLowerCase();
+        if(clText.includes(ql) || certText.includes(ql)){
+          hits.push({
+            cert,
+            section: sec.title,
+            clause: cl,
+            score: clText.includes(ql) ? 2 : 1,
+          });
+        }
+      }
+    }
+    // also search notice
+    if(cert.notice &amp;&amp; cert.notice.toLowerCase().includes(ql)){
+      hits.push({cert, section:'PD关注点', clause:{no:'—',key:'PD关注点',val:cert.notice}, score:1});
+    }
+  }
+  // dedup and sort by score
+  hits.sort((a,b)=>b.score-a.score);
+  return hits;
+}
+
+function renderSearchResults(q){
+  const panel = document.getElementById('sr-panel');
+  const resultsEl = document.getElementById('sr-results');
+  const countEl = document.getElementById('sr-count');
+  const showAllEl = document.getElementById('sr-show-all');
+
+  if(!q || q.length < 2){
+    panel.classList.remove('on');
+    document.getElementById('sh-hint').textContent = '输入关键词，直接定位到相关条款';
+    document.getElementById('sh-clear').style.display = 'none';
+    return;
+  }
+
+  document.getElementById('sh-clear').style.display = '';
+  searchResultsAll = searchClauses(q);
+  const total = searchResultsAll.length;
+  countEl.textContent = `${total} 条条款匹配`;
+  document.getElementById('sh-hint').textContent = total > 0 ? `找到 ${total} 条相关条款` : '未找到相关条款';
+
+  if(total === 0){
+    panel.classList.add('on');
+    resultsEl.innerHTML = `<div class=&quot;sr-empty&quot;>未找到与&quot;${q}&quot;相关的认证条款<br><span style=&quot;font-size:12px;margin-top:6px;display:block&quot;>建议尝试：热失控 / 过充 / 绝缘 / UN R100 / 碳足迹 / 担保</span></div>`;
+    showAllEl.style.display = 'none';
+    return;
+  }
+
+  panel.classList.add('on');
+  const toShow = showingAllResults ? searchResultsAll : searchResultsAll.slice(0, RESULTS_PREVIEW);
+  resultsEl.innerHTML = toShow.map(h=>{
+    const c = h.cert;
+    const cl = h.clause;
+    return `<div class=&quot;sr-item&quot; onclick=&quot;jumpToCard('${c.id}')&quot;>
+      <span class=&quot;sr-item-flag&quot;>${c.flag}</span>
+      <div>
+        <div class=&quot;sr-item-std&quot;>${c.std} <span style=&quot;font-size:11px;color:var(--text3);font-weight:400&quot;>· ${c.mktName}</span></div>
+        ${cl.no &amp;&amp; cl.no!=='—' ? `<div class=&quot;sr-item-clause&quot;>${cl.no} ${h.section}</div>`:`<div class=&quot;sr-item-clause&quot;>${h.section}</div>`}
+        <div class=&quot;sr-item-text&quot;>${highlight(cl.key,'')}: ${highlight(cl.val, q)}</div>
+      </div>
+      <span class=&quot;sr-item-mkt&quot;>${MF[c.mkt]||''} ${c.mkt}</span>
+    </div>`;
+  }).join('');
+
+  showAllEl.style.display = (!showingAllResults &amp;&amp; total > RESULTS_PREVIEW) ? '' : 'none';
+  if(!showingAllResults &amp;&amp; total > RESULTS_PREVIEW){
+    showAllEl.querySelector('button').textContent = `显示全部 ${total} 条结果 ↓`;
+  }
+}
+
+function showAllResults(){
+  showingAllResults = true;
+  renderSearchResults(ST.q);
+}
+
+function clearSearch(){
+  document.getElementById('main-srch').value = '';
+  ST.q = '';
+  showingAllResults = false;
+  searchResultsAll = [];
+  renderSearchResults('');
+  render();
+}
+
+function jumpToCard(certId){
+  ST.view = 'cards';
+  document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('on', b.dataset.view==='cards'));
+  document.querySelectorAll('[data-mkt]').forEach(b=>b.classList.toggle('on', b.dataset.mkt==='all'));
+  document.querySelectorAll('[data-cat]').forEach(b=>b.classList.toggle('on', b.dataset.cat==='all'));
+  ST.mkt = 'all'; ST.form = 'all'; ST.cat = 'all';
+  renderCards(CERTS, true, certId);
+  document.getElementById('v-cards').classList.add('on');
+  document.getElementById('v-matrix').classList.remove('on');
+  document.getElementById('v-timeline').classList.remove('on');
+  setTimeout(()=>{
+    const el = document.getElementById('card-'+certId);
+    if(el){ el.scrollIntoView({behavior:'smooth',block:'center'}); el.classList.add('search-match'); setTimeout(()=>el.classList.remove('search-match'),2500); }
+  }, 100);
+}
+
+// ═══════════════════════════════════════════════════
+//  FILTER
+// ═══════════════════════════════════════════════════
+function filterCerts(){
+  return CERTS.filter(c=>{
+    if(ST.mkt !== 'all' &amp;&amp; c.mkt !== ST.mkt) return false;
+
+    if(ST.cat !== 'all' &amp;&amp; !c.cats.includes(ST.cat)) return false;
+    return true;
+  });
+}
+
+// ═══════════════════════════════════════════════════
+//  RENDER CARDS
+// ═══════════════════════════════════════════════════
+function renderCards(list, useList=false, highlightId=null){
+  const data = useList ? list : filterCerts();
+  const q = ST.q.toLowerCase();
+  const grid = document.getElementById('cert-grid');
+  if(!data.length){
+    grid.innerHTML = '<div style=&quot;grid-column:1/-1;text-align:center;padding:64px;color:var(--text3);font-size:15px&quot;>未找到匹配的认证标准</div>';
+    return;
+  }
+  grid.innerHTML = data.map((c,i)=>{
+    const badgesH = c.badges.map(b=>`<span class=&quot;badge ${b.c}&quot;>${b.t}</span>`).join('');
+    const tagsH = c.tags.map(t=>`<span class=&quot;ct ${t.c}&quot;>${t.t}</span>`).join('');
+    const sectionsH = c.sections.map(sec=>{
+      const clausesH = sec.clauses.map(cl=>{
+        const isMatch = q &amp;&amp; ([cl.no||'',cl.key||'',cl.val||'',cl.note||''].join(' ').toLowerCase().includes(q));
+        return `<div class=&quot;clause-item${isMatch?' match-hl':''}&quot;>
+          ${cl.no ? `<div class=&quot;clause-no&quot;>${cl.no}</div>` : ''}
+          <div class=&quot;clause-key&quot;>${q ? highlight(cl.key,q) : cl.key}</div>
+          <div class=&quot;clause-val${cl.severity?' '+cl.severity:''}&quot;>${q ? highlight(cl.val,q) : cl.val}</div>
+          ${cl.note ? `<div class=&quot;clause-note&quot;>${cl.note}</div>` : ''}
+        </div>`;
+      }).join('');
+      return `<div class=&quot;cc-section&quot;>
+        <div class=&quot;cc-section-hd&quot; onclick=&quot;toggleSection(this)&quot;>
+          <span class=&quot;cc-section-icon&quot; style=&quot;background:${sec.iconBg};color:${sec.color}&quot;>${sec.icon}</span>
+          <span class=&quot;cc-section-title&quot;>${sec.title}</span>
+          <span class=&quot;cc-section-badge&quot; style=&quot;background:${sec.iconBg};color:${sec.color}&quot;>${sec.clauses.length}项</span>
+          <span class=&quot;cc-section-toggle&quot;>▾</span>
+        </div>
+        <div class=&quot;clause-list&quot;>${clausesH}</div>
+      </div>`;
+    }).join('');
+    const labsH = c.labs.map(l=>`<span class=&quot;lab&quot;>${l}</span>`).join('');
+    return `<div class=&quot;cc&quot; id=&quot;card-${c.id}&quot; style=&quot;--cd:${i*35}ms&quot;>
+      <div class=&quot;cc-top&quot; style=&quot;background:${c.color}&quot;></div>
+      <div class=&quot;cc-head&quot;>
+        <div class=&quot;cc-flag-wrap&quot;><div class=&quot;cc-flag&quot;>${c.flag}</div><div class=&quot;cc-mkt-tag&quot;>${c.mktName}</div></div>
+        <div class=&quot;cc-info&quot;>
+          <div class=&quot;cc-std&quot;>${c.std}</div>
+          <div class=&quot;cc-full&quot;>${c.full}</div>
+          <div class=&quot;cc-badges&quot;>${badgesH}</div>
+        </div>
+      </div>
+      <div class=&quot;cc-tags&quot;>${tagsH}</div>
+      ${sectionsH}
+      <div class=&quot;cc-labs&quot;><span class=&quot;cc-labs-lbl&quot;>认可测试机构</span>${labsH}</div>
+      <div class=&quot;cc-notice&quot; style=&quot;border-left-color:${c.noticeColor||c.color}&quot;>
+        <div class=&quot;cc-notice-lbl&quot; style=&quot;color:${c.noticeColor||c.color}&quot;>${c.noticeLbl||'注意事项'}</div>
+        ${c.notice}
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function toggleSection(hd){
+  const sec = hd.closest('.cc-section');
+  sec.classList.toggle('collapsed');
+}
+
+// ═══════════════════════════════════════════════════
+//  RENDER MATRIX
+// ═══════════════════════════════════════════════════
+function renderMatrix(){
+  const sm = {must:{c:'mx-must',s:'●',l:'强制'},vol:{c:'mx-vol',s:'○',l:'自愿'},plan:{c:'mx-plan',s:'△',l:'过渡'},na:{c:'mx-na',s:'—',l:'N/A'}};
+  const t = document.getElementById('matrix-table');
+  const head = `<thead><tr><th>认证标准</th>${MKTS.map(m=>`<th>${MF[m]}<br><span style=&quot;font-family:var(--ffm);font-size:10px&quot;>${m}</span></th>`).join('')}</tr></thead>`;
+  const body = `<tbody>${MATRIX.map(row=>`<tr>
+    <td><div class=&quot;mx-std&quot;>${row.std}</div><div class=&quot;mx-cat&quot;>${row.cat}</div></td>
+    ${MKTS.map(m=>{const s=row.cells[m]||'na';const {c,s:sym,l}=sm[s];return `<td><div style=&quot;display:flex;flex-direction:column;align-items:center;gap:2px&quot;><div class=&quot;mx-dot ${c}&quot;>${sym}</div><div class=&quot;mx-lbl&quot;>${l}</div></div></td>`;}).join('')}
+  </tr>`).join('')}</tbody>`;
+  t.innerHTML = head+body;
+}
+
+// ═══════════════════════════════════════════════════
+//  RENDER TIMELINE
+// ═══════════════════════════════════════════════════
+function renderTimeline(){
+  const il = {'high':'⚠ 高影响','mid':'⚡ 中等影响','low':'ℹ 低影响'};
+  document.getElementById('tl-grid').innerHTML = TIMELINE.map((e,i)=>`
+    <div class=&quot;tl-card&quot; style=&quot;--td:${i*45}ms;--tc:${e.color}&quot;>
+      <div class=&quot;tl-year&quot;><div class=&quot;tl-dot-s&quot;></div>${e.year}</div>
+      <div class=&quot;tl-ttl&quot;>${e.title}</div>
+      <div class=&quot;tl-body&quot;>${e.body}</div>
+      <div class=&quot;tl-impact impact-${e.impactLevel}&quot;><strong>${il[e.impactLevel]}</strong> ${e.impact}</div>
+      <div class=&quot;tl-mkt&quot;>${e.mkts.map(m=>`<span class=&quot;tl-mkt-t&quot;>${MF[m]} ${m}</span>`).join('')}</div>
+    </div>`).join('');
+}
+
+// ═══════════════════════════════════════════════════
+//  MASTER RENDER
+// ═══════════════════════════════════════════════════
+function render(){
+  const f = filterCerts();
+  ['cards','matrix','timeline'].forEach(v=>{
+    document.getElementById('v-'+v).classList.toggle('on', ST.view===v);
+  });
+  const tm = {cards:'认证卡片',matrix:'合规矩阵',timeline:'变更时间轴'};
+  document.getElementById('view-title').textContent = tm[ST.view];
+  document.getElementById('view-count').textContent = ST.view==='cards'?`${f.length} 条`:ST.view==='timeline'?`${TIMELINE.length} 项`:`${MATRIX.length} × ${MKTS.length}`;
+  if(ST.view==='cards') renderCards(f);
+  else if(ST.view==='matrix') renderMatrix();
+  else renderTimeline();
+}
+
+// ═══════════════════════════════════════════════════
+//  EVENTS
+// ═══════════════════════════════════════════════════
+document.querySelectorAll('[data-mkt]').forEach(b=>b.addEventListener('click',()=>{
+  ST.mkt=b.dataset.mkt;document.querySelectorAll('[data-mkt]').forEach(x=>x.classList.toggle('on',x===b));render();
+}));
+
+document.querySelectorAll('[data-cat]').forEach(b=>b.addEventListener('click',()=>{
+  ST.cat=b.dataset.cat;document.querySelectorAll('[data-cat]').forEach(x=>x.classList.toggle('on',x===b));render();
+}));
+document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>{
+  ST.view=b.dataset.view;document.querySelectorAll('[data-view]').forEach(x=>x.classList.toggle('on',x===b));render();
+}));
+
+let srchTimer;
+document.getElementById('main-srch').addEventListener('input',e=>{
+  ST.q = e.target.value.trim();
+  showingAllResults = false;
+  clearTimeout(srchTimer);
+  srchTimer = setTimeout(()=>{ renderSearchResults(ST.q); render(); }, 180);
+});
+
+render();
+</script>
+</body>
+</html>
+"
+></iframe>
+
+<script>
+function switchPage(page) {
+  document.querySelectorAll('.app-nav-tab').forEach(function(b){
+    b.classList.toggle('active', b.textContent.trim() === (page === 'policy' ? '政策图谱' : '认证速查'));
+  });
+  document.querySelectorAll('.page-frame').forEach(function(f){
+    f.classList.remove('active');
+  });
+  document.getElementById('frame-' + page).classList.add('active');
+}
 </script>
 </body>
 </html>
